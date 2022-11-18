@@ -17,6 +17,9 @@
 		231C890629284569005D3784 /* CoatyObjectTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C890529284569005D3784 /* CoatyObjectTypes.swift */; };
 		231C890A292845D1005D3784 /* ExampleControllerObserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C8909292845D1005D3784 /* ExampleControllerObserve.swift */; };
 		231C890E29284615005D3784 /* ExampleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C890D29284615005D3784 /* ExampleObject.swift */; };
+		231C8913292849A4005D3784 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C8912292849A4005D3784 /* MapView.swift */; };
+		231C8915292849DD005D3784 /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C8914292849DD005D3784 /* MapViewRepresentable.swift */; };
+		231C891829284A3E005D3784 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C891729284A3E005D3784 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		231C890529284569005D3784 /* CoatyObjectTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoatyObjectTypes.swift; sourceTree = "<group>"; };
 		231C8909292845D1005D3784 /* ExampleControllerObserve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleControllerObserve.swift; sourceTree = "<group>"; };
 		231C890D29284615005D3784 /* ExampleObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleObject.swift; sourceTree = "<group>"; };
+		231C8912292849A4005D3784 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		231C8914292849DD005D3784 /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
+		231C891729284A3E005D3784 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,7 @@
 		231C88EE292843F9005D3784 /* sixt */ = {
 			isa = PBXGroup;
 			children = (
+				231C89102928497A005D3784 /* Views */,
 				231C8900292844D8005D3784 /* Coaty */,
 				231C88EF292843F9005D3784 /* sixtApp.swift */,
 				231C88F1292843F9005D3784 /* ContentView.swift */,
@@ -122,6 +129,24 @@
 			children = (
 			);
 			path = Publish;
+			sourceTree = "<group>";
+		};
+		231C89102928497A005D3784 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				231C891129284983005D3784 /* Map */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		231C891129284983005D3784 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				231C8912292849A4005D3784 /* MapView.swift */,
+				231C8914292849DD005D3784 /* MapViewRepresentable.swift */,
+				231C891729284A3E005D3784 /* MapViewController.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,8 +226,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				231C88F2292843F9005D3784 /* ContentView.swift in Sources */,
+				231C8913292849A4005D3784 /* MapView.swift in Sources */,
 				231C8902292844EF005D3784 /* CoatyDelegate.swift in Sources */,
+				231C891829284A3E005D3784 /* MapViewController.swift in Sources */,
 				231C89042928453A005D3784 /* CoatyControllerTypes.swift in Sources */,
+				231C8915292849DD005D3784 /* MapViewRepresentable.swift in Sources */,
 				231C88F0292843F9005D3784 /* sixtApp.swift in Sources */,
 				231C890A292845D1005D3784 /* ExampleControllerObserve.swift in Sources */,
 				231C890629284569005D3784 /* CoatyObjectTypes.swift in Sources */,
