@@ -11,6 +11,12 @@
 		231C88F2292843F9005D3784 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C88F1292843F9005D3784 /* ContentView.swift */; };
 		231C88F4292843FB005D3784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 231C88F3292843FB005D3784 /* Assets.xcassets */; };
 		231C88F7292843FB005D3784 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 231C88F6292843FB005D3784 /* Preview Assets.xcassets */; };
+		231C88FF292844A0005D3784 /* CoatySwift in Frameworks */ = {isa = PBXBuildFile; productRef = 231C88FE292844A0005D3784 /* CoatySwift */; };
+		231C8902292844EF005D3784 /* CoatyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C8901292844EF005D3784 /* CoatyDelegate.swift */; };
+		231C89042928453A005D3784 /* CoatyControllerTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C89032928453A005D3784 /* CoatyControllerTypes.swift */; };
+		231C890629284569005D3784 /* CoatyObjectTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C890529284569005D3784 /* CoatyObjectTypes.swift */; };
+		231C890A292845D1005D3784 /* ExampleControllerObserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C8909292845D1005D3784 /* ExampleControllerObserve.swift */; };
+		231C890E29284615005D3784 /* ExampleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C890D29284615005D3784 /* ExampleObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,11 @@
 		231C88F1292843F9005D3784 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		231C88F3292843FB005D3784 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		231C88F6292843FB005D3784 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		231C8901292844EF005D3784 /* CoatyDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoatyDelegate.swift; sourceTree = "<group>"; };
+		231C89032928453A005D3784 /* CoatyControllerTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoatyControllerTypes.swift; sourceTree = "<group>"; };
+		231C890529284569005D3784 /* CoatyObjectTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoatyObjectTypes.swift; sourceTree = "<group>"; };
+		231C8909292845D1005D3784 /* ExampleControllerObserve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleControllerObserve.swift; sourceTree = "<group>"; };
+		231C890D29284615005D3784 /* ExampleObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				231C88FF292844A0005D3784 /* CoatySwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +63,7 @@
 		231C88EE292843F9005D3784 /* sixt */ = {
 			isa = PBXGroup;
 			children = (
+				231C8900292844D8005D3784 /* Coaty */,
 				231C88EF292843F9005D3784 /* sixtApp.swift */,
 				231C88F1292843F9005D3784 /* ContentView.swift */,
 				231C88F3292843FB005D3784 /* Assets.xcassets */,
@@ -65,6 +78,50 @@
 				231C88F6292843FB005D3784 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		231C8900292844D8005D3784 /* Coaty */ = {
+			isa = PBXGroup;
+			children = (
+				231C8908292845A1005D3784 /* Controllers */,
+				231C890729284599005D3784 /* Objects */,
+				231C8901292844EF005D3784 /* CoatyDelegate.swift */,
+				231C89032928453A005D3784 /* CoatyControllerTypes.swift */,
+				231C890529284569005D3784 /* CoatyObjectTypes.swift */,
+			);
+			path = Coaty;
+			sourceTree = "<group>";
+		};
+		231C890729284599005D3784 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				231C890D29284615005D3784 /* ExampleObject.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		231C8908292845A1005D3784 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				231C890C292845EA005D3784 /* Publish */,
+				231C890B292845E2005D3784 /* Observe */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		231C890B292845E2005D3784 /* Observe */ = {
+			isa = PBXGroup;
+			children = (
+				231C8909292845D1005D3784 /* ExampleControllerObserve.swift */,
+			);
+			path = Observe;
+			sourceTree = "<group>";
+		};
+		231C890C292845EA005D3784 /* Publish */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Publish;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +140,9 @@
 			dependencies = (
 			);
 			name = sixt;
+			packageProductDependencies = (
+				231C88FE292844A0005D3784 /* CoatySwift */,
+			);
 			productName = sixt;
 			productReference = 231C88EC292843F9005D3784 /* sixt.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +171,9 @@
 				Base,
 			);
 			mainGroup = 231C88E3292843F9005D3784;
+			packageReferences = (
+				231C88FD292844A0005D3784 /* XCRemoteSwiftPackageReference "coaty-swift" */,
+			);
 			productRefGroup = 231C88ED292843F9005D3784 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +201,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				231C88F2292843F9005D3784 /* ContentView.swift in Sources */,
+				231C8902292844EF005D3784 /* CoatyDelegate.swift in Sources */,
+				231C89042928453A005D3784 /* CoatyControllerTypes.swift in Sources */,
 				231C88F0292843F9005D3784 /* sixtApp.swift in Sources */,
+				231C890A292845D1005D3784 /* ExampleControllerObserve.swift in Sources */,
+				231C890629284569005D3784 /* CoatyObjectTypes.swift in Sources */,
+				231C890E29284615005D3784 /* ExampleObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +407,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		231C88FD292844A0005D3784 /* XCRemoteSwiftPackageReference "coaty-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/philippzagar/coaty-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		231C88FE292844A0005D3784 /* CoatySwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 231C88FD292844A0005D3784 /* XCRemoteSwiftPackageReference "coaty-swift" */;
+			productName = CoatySwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 231C88E4292843F9005D3784 /* Project object */;
 }

@@ -1,0 +1,59 @@
+{
+  "pins" : [
+    {
+      "identity" : "coaty-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/philippzagar/coaty-swift",
+      "state" : {
+        "revision" : "3505c20816d2d5b67ca15343ecfaaa013fbfb62d",
+        "version" : "2.4.0"
+      }
+    },
+    {
+      "identity" : "cocoamqtt",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/emqx/CocoaMQTT",
+      "state" : {
+        "revision" : "2bb3a92eb40dbe21d4deed57e37da68459239406",
+        "version" : "2.0.7"
+      }
+    },
+    {
+      "identity" : "mqttcocoaasyncsocket",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/leeway1208/MqttCocoaAsyncSocket",
+      "state" : {
+        "revision" : "8c61a10eab8c9bc3a4d28883c1a25f6a271400f2",
+        "version" : "1.0.5"
+      }
+    },
+    {
+      "identity" : "rxswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ReactiveX/RxSwift.git",
+      "state" : {
+        "revision" : "cec68169a048a079f461ba203fe85636548d7a89",
+        "version" : "5.1.3"
+      }
+    },
+    {
+      "identity" : "starscream",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/daltoniam/Starscream.git",
+      "state" : {
+        "revision" : "a063fda2b8145a231953c20e7a646be254365396",
+        "version" : "3.1.2"
+      }
+    },
+    {
+      "identity" : "xcglogger",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/DaveWoodCom/XCGLogger.git",
+      "state" : {
+        "revision" : "a9c4667b247928a29bdd41be2ec2c8d304215a54",
+        "version" : "7.0.1"
+      }
+    }
+  ],
+  "version" : 2
+}
