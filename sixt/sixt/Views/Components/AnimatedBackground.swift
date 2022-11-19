@@ -16,7 +16,7 @@ struct AnimatedBackground: View {
 
     var body: some View {
         LinearGradient(gradient: Gradient(colors: colors), startPoint: start, endPoint: end)
-            .animation(Animation.easeInOut(duration: 3).repeatForever(), value: start) /// don't forget the `value`!
+            .animation(Animation.easeInOut(duration: Double.random(in: 3..<5)).repeatForever(), value: start) /// don't forget the `value`!
             .onReceive(timer) { _ in
                 
                 self.start = nextPointFrom(self.start)

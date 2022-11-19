@@ -17,7 +17,7 @@ struct FilledButton: ButtonStyle {
             .foregroundColor(.white)
             .padding(.vertical, 8)
             .padding(.horizontal, 16)
-            .background(isEnabled ? Color.accentColor.opacity(configuration.isPressed ? 0.3 : 1.0) : .gray)
+            .background(AnimatedBackground().opacity(configuration.isPressed ? 0.3 : 1.0))
             .cornerRadius(8)
     }
 }
