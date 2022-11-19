@@ -94,9 +94,10 @@ struct NewTaskView: View {
                 
                 Button("Accept") {
                     model.userState = .Working
+                    model.currentTask = task
                     callBack()
                 }
-                .buttonStyle(FilledButton())
+                .buttonStyle(OutlineButton())
             }.frame(minWidth: 0, maxWidth: .infinity)
             
             VStack {

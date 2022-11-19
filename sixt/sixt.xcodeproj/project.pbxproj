@@ -37,6 +37,7 @@
 		5B354DA3292921A60047F84A /* TaskControllerPublish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B354DA2292921A60047F84A /* TaskControllerPublish.swift */; };
 		5B376DE529290ED30007CB9E /* ChargingTaskObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B376DE429290ED30007CB9E /* ChargingTaskObject.swift */; };
 		5B376DE7292912030007CB9E /* TaskControllerObserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B376DE6292912030007CB9E /* TaskControllerObserve.swift */; };
+		5BC50D2C29296314002CC89A /* CarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC50D2B29296314002CC89A /* CarDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,8 @@
 		5B376DE429290ED30007CB9E /* ChargingTaskObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingTaskObject.swift; sourceTree = "<group>"; };
 		5B376DE6292912030007CB9E /* TaskControllerObserve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskControllerObserve.swift; sourceTree = "<group>"; };
 		5BA2436A2928DFCD00916CC6 /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
+		5BC50D2B29296314002CC89A /* CarDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailView.swift; sourceTree = "<group>"; };
+		65F6A68729291A0500FA1648 /* CarDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				5B020F2D29292706003F078D /* NewTaskView.swift */,
+				5BC50D2B29296314002CC89A /* CarDetailView.swift */,
 				5B020F2F2929275C003F078D /* ChargingStationIcon.swift */,
 				231C893129294097005D3784 /* AnimatedBackground.swift */,
 				5B020F36292943A6003F078D /* BlurView.swift */,
@@ -232,6 +236,7 @@
 			children = (
 				5B376DDF2928ED8D0007CB9E /* ButtonStyles.swift */,
 				5BA2436A2928DFCD00916CC6 /* NewTaskView.swift */,
+				65F6A68729291A0500FA1648 /* CarDetailView.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -336,6 +341,7 @@
 				5B376DE7292912030007CB9E /* TaskControllerObserve.swift in Sources */,
 				5B020F302929275C003F078D /* ChargingStationIcon.swift in Sources */,
 				231C8902292844EF005D3784 /* CoatyDelegate.swift in Sources */,
+				5BC50D2C29296314002CC89A /* CarDetailView.swift in Sources */,
 				231C891829284A3E005D3784 /* MapViewController.swift in Sources */,
 				231C892A2928F702005D3784 /* UserState.swift in Sources */,
 				5B020F3329292786003F078D /* ButtonStyles.swift in Sources */,

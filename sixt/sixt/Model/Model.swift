@@ -15,4 +15,6 @@ class Model: ObservableObject {
     @Published var userState: UserState = .Idle
     
     @Published var tasks: [ChargingTask] = []
+    
+    @Published var currentTask: ChargingTask? = nil
 }
