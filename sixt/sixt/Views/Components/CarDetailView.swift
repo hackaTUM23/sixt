@@ -17,6 +17,13 @@ struct CarDetailView: View {
     @State var isLocked = true
     @State var isLightOn = false
     
+    var carBatteryPercentage: String {
+        let formatter = NumberFormatter()
+        formatter.maximumFractionDigits = 0
+        
+        return (formatter.string(from: NSNumber(value: carDetails.batteryPercentage)) ?? "--") + " %"
+    }
+    
     var body: some View {
         VStack {
             HStack {
@@ -46,7 +53,7 @@ struct CarDetailView: View {
                     HStack {
                         Image(systemName: "battery.25")
                             .frame(width: 40)
-                        Text("\(carDetails.batteryPercentage) %")
+                        Text(carBatteryPercentage)
                             .bold()
                     }
                 }
