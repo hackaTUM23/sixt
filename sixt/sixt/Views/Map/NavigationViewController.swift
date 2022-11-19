@@ -68,8 +68,8 @@ class CustomDayStyle: DayStyle {
         super.init()
         
         // Use a custom map style.
-        mapStyleURL = URL(string: "mapbox://styles/nikolaimadlener/clanz01n2002314ohhl95a1en")!
-        previewMapStyleURL = URL(string: "mapbox://styles/nikolaimadlener/clanz01n2002314ohhl95a1en")!
+        mapStyleURL = URL(string: "mapbox://styles/kitesagates/clao22p31001s14phtihl44g6")!
+        previewMapStyleURL = URL(string: "mapbox://styles/kitesagates/clao22p31001s14phtihl44g6")!
         
         // Specify that the style should be used during the day.
         styleType = .day
