@@ -97,7 +97,7 @@ struct NewTaskView: View {
                     model.currentTask = task
                     callBack()
                 }
-                .buttonStyle(OutlineButton())
+                .buttonStyle(FilledButton())
             }.frame(minWidth: 0, maxWidth: .infinity)
             
             VStack {

@@ -26,13 +26,15 @@ struct MapHomeView: View {
                         HStack(alignment: .center) {
                             NewTaskView(callBack: { self.showTask = false }, task: newChargingTask)
                         }.frame(maxWidth: .infinity)
-                            .background(BlurView())
+                            .background(BlurView(style: .dark))
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
                             .padding()
                             .offset(y: self.showTask ? 0 : -400)
                             .animation(Animation.default, value: self.showTask)
                     }
                     Spacer()
                 }
+                .preferredColorScheme(.dark)
             }
             
             VStack {

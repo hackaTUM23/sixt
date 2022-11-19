@@ -10,8 +10,14 @@ import UIKit
 import SwiftUI
 
 struct BlurView: View {
+    let style: UIBlurEffect.Style
+    
+    init(style: UIBlurEffect.Style = .light) {
+        self.style = style
+    }
+    
     var body: some View {
-        BlurViewRepresentable(style: .light)
+        BlurViewRepresentable(style: style)
     }
 }
 
