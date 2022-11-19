@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NewTaskView: View {
     @EnvironmentObject var model: Model
-    @Binding var showTask: Bool
+    let callBack: () -> ()
     let task: ChargingTask
     
     //    let departure: String
@@ -53,7 +53,7 @@ struct NewTaskView: View {
                     HStack {
                         // really hacky way to ensure alignment is correct
                         Image(systemName: "arrow.right").opacity(0)
-                        Text(emergencyTask.donatorLocation.description)
+                        Text(emergencyTask.donatorLocation.description).lineLimit(1)
                         Image(systemName: "car.side")
                         Label(donorCarBatteryPercentage, systemImage: "battery.75")
                     }
@@ -63,7 +63,7 @@ struct NewTaskView: View {
                     Image(systemName: "arrow.right")
                         .opacity(task is EmergencyChargingTask ? 1 : 0)
                     
-                    Text(task.departure.description)
+                    Text(task.departure.description).lineLimit(1)
                     Image(systemName: "car.side.and.exclamationmark")
                     
                     Label(carBatteryPercentage, systemImage: "battery.25")
@@ -71,7 +71,7 @@ struct NewTaskView: View {
                 
                 HStack {
                     Image(systemName: "arrow.right")
-                    Text(task.destination.description)
+                    Text(task.destination.description).lineLimit(1)
                     ChargingStationIcon()
                 }
             }
@@ -89,15 +89,15 @@ struct NewTaskView: View {
             .padding(.bottom)
             
             HStack {
+                Button("Reject") {
+                    callBack()
+                }
+                .buttonStyle(OutlineButton())
+                
                 Button("Accept") {
                     model.userState = .Working
                 }
                 .buttonStyle(FilledButton())
-                
-                Button("Reject") {
-                    self.showTask = false
-                }
-                .buttonStyle(OutlineButton())
             }.frame(minWidth: 0, maxWidth: .infinity)
             
             VStack {
@@ -117,7 +117,7 @@ struct NewTaskView_Previews: PreviewProvider {
    
     static var previews: some View {
         NewTaskView(
-            showTask: $showTask, task: ChargingTask(
+            callBack: {}, task: ChargingTask(
                 id: UUID(),
                 departure: LatLng(lat: 13, lng: 11),
                 destination:LatLng(lat: 13, lng: 11),
@@ -133,7 +133,7 @@ struct NewTaskView_Previews: PreviewProvider {
             )
         )
         NewTaskView(
-            showTask: $showTask, task: EmergencyChargingTask(
+            callBack: {}, task: EmergencyChargingTask(
                 id: UUID(),
                 departure: LatLng(lat: 13, lng: 11),
                 destination: LatLng(lat: 13, lng: 11),

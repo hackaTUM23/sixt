@@ -31,19 +31,20 @@ struct MapHomeView: View {
                         .background(Color.white)
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                         .padding()
-                        .padding(.horizontal, 40)
                 }
             case .OpenToWork:
                 VStack {
+                    if let newChargingTask {
                     HStack(alignment: .center) {
-                        NewTaskView(showTask: $showTask, task: ChargingTask(id: UUID(), departure: LatLng(lat: 1.0, lng: 1.0), destination: LatLng(lat: 1.0, lng: 1.0), car: CarDetails(manufacturer: "Tesla", model: "3", color: "black", licenseNumber: "M-123", batteryPercentage: 15.0), price: 5.0, estimatedDuration: 23))
-                    }.frame(maxWidth: .infinity)
-                        .background(Color.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 20))
-                        .padding()
-                        .padding(.horizontal, 40)
-                        .offset(y: showTask ? 0 : -350)
-                        .animation(Animation.easeInOut(duration: 0.3), value: self.showTask)
+                        NewTaskView(callBack: setNewChargingTaskNil, task: newChargingTask)
+                            
+                        }.frame(maxWidth: .infinity)
+                            .background(Color.white)
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            .padding()
+                            .offset(y: self.showTask ? 0 : -400)
+                            .animation(Animation.default, value: self.showTask)
+                    }
                     Spacer()
                     HStack(alignment: .center) {
                         ToggleView(isOn: $openToWork) {
@@ -53,7 +54,6 @@ struct MapHomeView: View {
                         .background(Color.white)
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                         .padding()
-                        .padding(.horizontal, 40)
                 }
             case .Working:
                 NavigationViewRepresentable()
@@ -61,7 +61,6 @@ struct MapHomeView: View {
         }.onChange(of: openToWork) { _ in
             if openToWork {
                 model.userState = .OpenToWork
-                showTask = true
             } else {
                 model.userState = .Idle
             }
@@ -69,10 +68,17 @@ struct MapHomeView: View {
             print("Re-render")
         }
         .onChange(of: model.tasks) { tasks in
-            if model.userState == .OpenToWork && self.newChargingTask == nil && !tasks.isEmpty {
+            if model.userState == .OpenToWork && !self.showTask && !tasks.isEmpty {
                 self.newChargingTask = tasks.last
+                DispatchQueue.main.async {
+                    showTask = true
+                }
             }
         }
+    }
+    
+    func setNewChargingTaskNil() {
+        self.showTask = false
     }
 }
 
