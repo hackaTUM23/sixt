@@ -12,7 +12,6 @@ import SwiftUI
 struct BlurView: View {
     var body: some View {
         BlurViewRepresentable(style: .light)
-            .clipShape(RoundedRectangle(cornerRadius: 20))
     }
 }
 
@@ -21,6 +20,7 @@ struct BlurView_Previews: PreviewProvider {
         ZStack {
             BlurView()
                 .frame(width: 200, height: 200)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
         }
         .preferredColorScheme(.dark)
     }

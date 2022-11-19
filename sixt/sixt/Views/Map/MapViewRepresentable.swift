@@ -10,15 +10,16 @@ import UIKit
 import SwiftUI
 
 struct MapViewRepresentable: UIViewControllerRepresentable {
-    typealias UIViewControllerType = MapViewController
+    @EnvironmentObject var model: Model
+    typealias UIViewControllerType = AdvancedViewController//MapViewController
     
 //    var duckies: [DuckieBot]
     
-    func makeUIViewController(context: Context) -> MapViewController {
-        return MapViewController()
+    func makeUIViewController(context: Context) -> AdvancedViewController {
+        return AdvancedViewController(model: model)
     }
     
-    func updateUIViewController(_ uiViewController: MapViewController, context: Context) {
+    func updateUIViewController(_ uiViewController: AdvancedViewController, context: Context) {
 //        uiViewController.duckies = duckies
 //        uiViewController.destinations = destinations
 //        uiViewController.chargers = chargers

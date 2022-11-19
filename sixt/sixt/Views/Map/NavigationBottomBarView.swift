@@ -14,7 +14,6 @@ struct NavigationBottomBarView: View {
     
     var body: some View {
         Button(action: {
-            model.userState = .OpenToWork
             onDismiss()
         }) {
             Text("Abbort")

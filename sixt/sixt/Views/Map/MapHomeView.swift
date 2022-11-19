@@ -23,7 +23,6 @@ struct MapHomeView: View {
             if let newChargingTask {
                 VStack {
                     ZStack {
-                        //                        BlurView()
                         HStack(alignment: .center) {
                             NewTaskView(callBack: { self.showTask = false }, task: newChargingTask)
                         }.frame(maxWidth: .infinity)
@@ -40,19 +39,24 @@ struct MapHomeView: View {
                 Spacer()
                 HStack(alignment: .center) {
                     ToggleView(isOn: $openToWork) {
-                        openToWork ? Color.orange : Color.gray
+                        openToWork ? Color.white : Color.gray
                     }.frame(width: 60, height: 30).padding(30)
                 }.frame(maxWidth: .infinity)
-                    .background(BlurView())
+                    .background(ZStack {
+                        if openToWork {
+                            AnimatedBackground().opacity(0.8)
+                        }
+                        BlurView()
+                    }.clipShape(RoundedRectangle(cornerRadius: 20)))
                     .padding()
             }
             
-            if case .Working = model.userState {
-                BlurView()
-                    .frame(width: 100, height: 100)
-                ProgressView()
-                NavigationViewRepresentable()
-            }
+//            if case .Working = model.userState {
+//                BlurView()
+//                    .frame(width: 100, height: 100)
+//                ProgressView()
+//                NavigationViewRepresentable()
+//            }
         }.onChange(of: openToWork) { _ in
             if openToWork {
                 model.userState = .OpenToWork

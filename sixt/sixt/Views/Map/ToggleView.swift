@@ -27,7 +27,7 @@ struct ToggleView<Content: View>: View {
                     if let toggleButton = toggleButton {
                         toggleButton
                             .clipShape(Circle())
-                    }else {
+                    } else {
                         Circle()
                             .fill(Color.orange)
                     }

@@ -25,6 +25,7 @@
 		231C892C2928FC96005D3784 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C892B2928FC96005D3784 /* Model.swift */; };
 		231C893029291AE8005D3784 /* NavigationBottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C892F29291AE8005D3784 /* NavigationBottomBarView.swift */; };
 		231C893229294097005D3784 /* AnimatedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C893129294097005D3784 /* AnimatedBackground.swift */; };
+		231C89342929621C005D3784 /* AdvancedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C89332929621C005D3784 /* AdvancedViewController.swift */; };
 		5B020F2829292683003F078D /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 5B020F2729292683003F078D /* MapboxMaps */; };
 		5B020F2B29292690003F078D /* MapboxNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 5B020F2A29292690003F078D /* MapboxNavigation */; };
 		5B020F2E29292707003F078D /* NewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B020F2D29292706003F078D /* NewTaskView.swift */; };
@@ -60,6 +61,7 @@
 		231C892B2928FC96005D3784 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		231C892F29291AE8005D3784 /* NavigationBottomBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBottomBarView.swift; sourceTree = "<group>"; };
 		231C893129294097005D3784 /* AnimatedBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedBackground.swift; sourceTree = "<group>"; };
+		231C89332929621C005D3784 /* AdvancedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedViewController.swift; sourceTree = "<group>"; };
 		5B020F2D29292706003F078D /* NewTaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
 		5B020F2F2929275C003F078D /* ChargingStationIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingStationIcon.swift; sourceTree = "<group>"; };
 		5B020F3229292786003F078D /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				231C89242928EDED005D3784 /* LocationManager.swift */,
 				231C89262928F1B2005D3784 /* ToggleView.swift */,
 				231C892F29291AE8005D3784 /* NavigationBottomBarView.swift */,
+				231C89332929621C005D3784 /* AdvancedViewController.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B020F352929339E003F078D /* MapHomeView.swift in Sources */,
+				231C89342929621C005D3784 /* AdvancedViewController.swift in Sources */,
 				5B020F342929339A003F078D /* ContentView.swift in Sources */,
 				5B020F37292943A6003F078D /* BlurView.swift in Sources */,
 				231C89202928DD96005D3784 /* NavigationViewRepresentable.swift in Sources */,
