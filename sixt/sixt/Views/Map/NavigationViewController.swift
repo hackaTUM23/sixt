@@ -13,16 +13,16 @@ import CoreLocation
 import SwiftUI
 
 class NavViewController: UIViewController {
-    var model: Model = Model.shared
+    let model: Model
     
-//    init(model: Model) {
-//        self.model = model
-//        super.init(nibName: nil, bundle: nil)
-//    }
-//
-//    required convenience init?(coder: NSCoder) {
-//        self.init(model: Model())
-//    }
+    init(model: Model) {
+        self.model = model
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required convenience init?(coder: NSCoder) {
+        self.init(model: Model())
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +44,9 @@ class NavViewController: UIViewController {
             case .success(let response):
                 guard let self = self else { return }
                 let topBanner = CustomTopBarViewController()
-                let bottomBanner = CustomBottomBarViewController()
+                let bottomBanner = CustomBottomBarViewController(model: self.model, onDismiss: {
+                    self.presentedViewController?.dismiss(animated: true)
+                })
                 let navigationOptions = NavigationOptions(styles: [CustomDayStyle()], topBanner: topBanner, bottomBanner: bottomBanner)
                 
                 // Pass the first generated route to the the NavigationViewController
@@ -158,29 +160,24 @@ class CustomTopBarViewController: ContainerViewController {
 class CustomBottomBarViewController: ContainerViewController {
     
     weak var navigationViewController: NavigationViewController?
-    var model: Model = Model.shared
+    let model: Model
+    let onDismiss: () -> Void
     
-//    init(model: Model) {
-//        self.model = model
-//        super.init(nibName: nil, bundle: nil)
-//    }
-//
-//    required convenience init?(coder: NSCoder) {
-//        self.init(model: Model())
-//    }
-    
-    // Or you can implement your own UI elements
-    lazy var bannerView: UIView = {
-        let banner = UIHostingController(rootView: NavigationBottomBarView())
-        //        banner.translatesAutoresizingMaskIntoConstraints = false
-        //        banner.delegate = self
-        
-        return banner.view
-    }()
+    init(model: Model, onDismiss: @escaping () -> Void) {
+        self.model = model
+        self.onDismiss = onDismiss
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required convenience init?(coder: NSCoder) {
+        self.init(model: Model(), onDismiss: {})
+    }
     
     override func loadView() {
         super.loadView()
-        let hostingController = UIHostingController(rootView: NavigationBottomBarView())//.environmentObject(model))
+        let hostingController = UIHostingController(rootView: NavigationBottomBarView(onDismiss: {
+            self.onDismiss()
+        }).environmentObject(model))
         /// Add as a child of the current view controller.
         addChild(hostingController)
         

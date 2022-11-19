@@ -17,7 +17,7 @@ struct NavigationViewRepresentable: UIViewControllerRepresentable {
 //    var duckies: [DuckieBot]
     
     func makeUIViewController(context: Context) -> NavViewController {
-        return NavViewController()
+        return NavViewController(model: model)
     }
     
     func updateUIViewController(_ uiViewController: NavViewController, context: Context) {

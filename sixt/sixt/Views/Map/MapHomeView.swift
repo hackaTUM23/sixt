@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MapHomeView: View {
-    @ObservedObject var model = Model.shared
+    @EnvironmentObject var model: Model
     
     @State var openToWork = false
     
