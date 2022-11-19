@@ -20,6 +20,10 @@
 		231C8913292849A4005D3784 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C8912292849A4005D3784 /* MapView.swift */; };
 		231C8915292849DD005D3784 /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C8914292849DD005D3784 /* MapViewRepresentable.swift */; };
 		231C891829284A3E005D3784 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C891729284A3E005D3784 /* MapViewController.swift */; };
+		5B376DDD2928E5940007CB9E /* CharginStationIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B376DDC2928E5940007CB9E /* CharginStationIcon.swift */; };
+		5B376DE02928ED8D0007CB9E /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B376DDF2928ED8D0007CB9E /* ButtonStyles.swift */; };
+		5B376DE32928F2340007CB9E /* ChargingTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B376DE22928F2340007CB9E /* ChargingTask.swift */; };
+		5BA2436B2928DFCD00916CC6 /* NewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2436A2928DFCD00916CC6 /* NewTaskView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		231C8912292849A4005D3784 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		231C8914292849DD005D3784 /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
 		231C891729284A3E005D3784 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		5B376DDC2928E5940007CB9E /* CharginStationIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharginStationIcon.swift; sourceTree = "<group>"; };
+		5B376DDF2928ED8D0007CB9E /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		5B376DE22928F2340007CB9E /* ChargingTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingTask.swift; sourceTree = "<group>"; };
+		5BA2436A2928DFCD00916CC6 /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,7 @@
 		231C88EE292843F9005D3784 /* sixt */ = {
 			isa = PBXGroup;
 			children = (
+				5B376DE12928F22C0007CB9E /* Data */,
 				231C89102928497A005D3784 /* Views */,
 				231C8900292844D8005D3784 /* Coaty */,
 				231C88EF292843F9005D3784 /* sixtApp.swift */,
@@ -134,6 +143,8 @@
 		231C89102928497A005D3784 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5B376DDE2928ED810007CB9E /* Styles */,
+				5BA243672928DD8400916CC6 /* Components */,
 				231C891129284983005D3784 /* Map */,
 			);
 			path = Views;
@@ -147,6 +158,31 @@
 				231C891729284A3E005D3784 /* MapViewController.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		5B376DDE2928ED810007CB9E /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				5B376DDF2928ED8D0007CB9E /* ButtonStyles.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		5B376DE12928F22C0007CB9E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5B376DE22928F2340007CB9E /* ChargingTask.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5BA243672928DD8400916CC6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5BA2436A2928DFCD00916CC6 /* NewTaskView.swift */,
+				5B376DDC2928E5940007CB9E /* CharginStationIcon.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +261,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B376DE02928ED8D0007CB9E /* ButtonStyles.swift in Sources */,
+				5BA2436B2928DFCD00916CC6 /* NewTaskView.swift in Sources */,
 				231C88F2292843F9005D3784 /* ContentView.swift in Sources */,
 				231C8913292849A4005D3784 /* MapView.swift in Sources */,
 				231C8902292844EF005D3784 /* CoatyDelegate.swift in Sources */,
@@ -234,6 +272,8 @@
 				231C88F0292843F9005D3784 /* sixtApp.swift in Sources */,
 				231C890A292845D1005D3784 /* ExampleControllerObserve.swift in Sources */,
 				231C890629284569005D3784 /* CoatyObjectTypes.swift in Sources */,
+				5B376DDD2928E5940007CB9E /* CharginStationIcon.swift in Sources */,
+				5B376DE32928F2340007CB9E /* ChargingTask.swift in Sources */,
 				231C890E29284615005D3784 /* ExampleObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
