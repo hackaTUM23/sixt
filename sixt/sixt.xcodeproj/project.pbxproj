@@ -473,6 +473,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sixt/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need access to your location.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need access to your location.";
+				INFOPLIST_KEY_NSLocationUsageDescription = Test;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = Test;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -503,6 +507,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sixt/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need access to your location.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need access to your location.";
+				INFOPLIST_KEY_NSLocationUsageDescription = Test;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = Test;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

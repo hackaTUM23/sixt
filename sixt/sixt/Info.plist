@@ -9,13 +9,5 @@
 		<string>audio</string>
 		<string>location</string>
 	</array>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>We need access to your location.</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>We need access to your location.</string>
-	<key>NSLocationUsageDescription</key>
-	<string>Test</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Test</string>
 </dict>
 </plist>
