@@ -26,7 +26,7 @@ struct MapHomeView: View {
                         HStack(alignment: .center) {
                             NewTaskView(callBack: { self.showTask = false }, task: newChargingTask)
                         }.frame(maxWidth: .infinity)
-                            .background(BlurView())
+                            .background(BlurView(style: .dark))
                             .clipShape(RoundedRectangle(cornerRadius: 20))
                             .padding()
                             .offset(y: self.showTask ? 0 : -400)
@@ -34,6 +34,7 @@ struct MapHomeView: View {
                     }
                     Spacer()
                 }
+                .preferredColorScheme(.dark)
             }
             
             VStack {
