@@ -25,7 +25,7 @@ struct MapHomeView: View {
                     Spacer()
                     HStack(alignment: .center) {
                         ToggleView(isOn: $openToWork) {
-                            openToWork ? Color.orange : Color.gray
+                            openToWork ? Color.white : Color.gray
                         }.frame(width: 60, height: 30).padding(30)
                     }.frame(maxWidth: .infinity)
                         .background(Color.white)
@@ -48,10 +48,10 @@ struct MapHomeView: View {
                     Spacer()
                     HStack(alignment: .center) {
                         ToggleView(isOn: $openToWork) {
-                            openToWork ? Color.orange : Color.gray
+                            openToWork ? Color.white : Color.gray
                         }.frame(width: 60, height: 30).padding(30)
                     }.frame(maxWidth: .infinity)
-                        .background(Color.white)
+                        .background(AnimatedBackground())
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                         .padding()
                 }

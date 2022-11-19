@@ -45,8 +45,9 @@ struct NewTaskView: View {
     var body: some View {
         VStack(alignment: .center) {
             Text("New task")
-                .font(.title)
-                .padding(.bottom)
+                .font(Font.title3)
+                .fontWeight(.bold)
+                .padding(.bottom, 5)
             
             VStack(alignment: .leading) {
                 if let emergencyTask = task as? EmergencyChargingTask {

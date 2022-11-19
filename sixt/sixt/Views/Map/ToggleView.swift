@@ -29,7 +29,7 @@ struct ToggleView<Content: View>: View {
                             .clipShape(Circle())
                     }else {
                         Circle()
-                            .fill(Color.white)
+                            .fill(Color.orange)
                     }
                 }.padding(2.5)
                 .frame(width: reader.frame(in: .global).height)
