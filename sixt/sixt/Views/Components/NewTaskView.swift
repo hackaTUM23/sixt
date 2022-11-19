@@ -12,9 +12,6 @@ struct NewTaskView: View {
     let callBack: () -> ()
     let task: ChargingTask
     
-    //    let departure: String
-    //    let destination: String
-    //
     var totalPrice: String {
         let formatter = NumberFormatter()
         formatter.alwaysShowsDecimalSeparator = true

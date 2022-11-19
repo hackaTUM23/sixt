@@ -35,9 +35,8 @@ struct MapHomeView: View {
             case .OpenToWork:
                 VStack {
                     if let newChargingTask {
-                    HStack(alignment: .center) {
-                        NewTaskView(callBack: setNewChargingTaskNil, task: newChargingTask)
-                            
+                        HStack(alignment: .center) {
+                            NewTaskView(callBack: { self.showTask = false }, task: newChargingTask)
                         }.frame(maxWidth: .infinity)
                             .background(Color.white)
                             .clipShape(RoundedRectangle(cornerRadius: 20))
@@ -64,8 +63,6 @@ struct MapHomeView: View {
             } else {
                 model.userState = .Idle
             }
-        }.onAppear {
-            print("Re-render")
         }
         .onChange(of: model.tasks) { tasks in
             if model.userState == .OpenToWork && !self.showTask && !tasks.isEmpty {
@@ -75,10 +72,6 @@ struct MapHomeView: View {
                 }
             }
         }
-    }
-    
-    func setNewChargingTaskNil() {
-        self.showTask = false
     }
 }
 
