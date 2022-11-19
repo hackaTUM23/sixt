@@ -13,6 +13,8 @@ struct MapHomeView: View {
     @State var openToWork = false
     @State var showTask = false
     
+    @State var newChargingTask: ChargingTask? = nil
+    
     var body: some View {
         ZStack {
             MapViewRepresentable()
@@ -65,6 +67,11 @@ struct MapHomeView: View {
             }
         }.onAppear {
             print("Re-render")
+        }
+        .onChange(of: model.tasks) { tasks in
+            if model.userState == .OpenToWork && self.newChargingTask == nil && !tasks.isEmpty {
+                self.newChargingTask = tasks.last
+            }
         }
     }
 }

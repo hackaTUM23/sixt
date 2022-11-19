@@ -8,7 +8,11 @@
 import Foundation
 
 class Model: ObservableObject {
-//    static let shared: Model = Model()
+    static let shared: Model = Model()
+    
+    private init() {}
     
     @Published var userState: UserState = .Idle
+    
+    @Published var tasks: [ChargingTask] = []
 }

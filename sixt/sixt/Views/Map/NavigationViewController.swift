@@ -21,7 +21,7 @@ class NavViewController: UIViewController {
     }
 
     required convenience init?(coder: NSCoder) {
-        self.init(model: Model())
+        self.init(model: Model.shared)
     }
     
     override func viewDidLoad() {
@@ -170,7 +170,7 @@ class CustomBottomBarViewController: ContainerViewController {
     }
 
     required convenience init?(coder: NSCoder) {
-        self.init(model: Model(), onDismiss: {})
+        self.init(model: Model.shared, onDismiss: {})
     }
     
     override func loadView() {
