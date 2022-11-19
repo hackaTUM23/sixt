@@ -29,6 +29,8 @@
 		5B020F2E29292707003F078D /* NewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B020F2D29292706003F078D /* NewTaskView.swift */; };
 		5B020F302929275C003F078D /* ChargingStationIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B020F2F2929275C003F078D /* ChargingStationIcon.swift */; };
 		5B020F3329292786003F078D /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B020F3229292786003F078D /* ButtonStyles.swift */; };
+		5B020F342929339A003F078D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C88F1292843F9005D3784 /* ContentView.swift */; };
+		5B020F352929339E003F078D /* MapHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C8912292849A4005D3784 /* MapHomeView.swift */; };
 		5B354DA3292921A60047F84A /* TaskControllerPublish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B354DA2292921A60047F84A /* TaskControllerPublish.swift */; };
 		5B376DE529290ED30007CB9E /* ChargingTaskObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B376DE429290ED30007CB9E /* ChargingTaskObject.swift */; };
 		5B376DE7292912030007CB9E /* TaskControllerObserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B376DE6292912030007CB9E /* TaskControllerObserve.swift */; };
@@ -313,6 +315,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B020F352929339E003F078D /* MapHomeView.swift in Sources */,
+				5B020F342929339A003F078D /* ContentView.swift in Sources */,
 				231C89202928DD96005D3784 /* NavigationViewRepresentable.swift in Sources */,
 				231C891E2928DC5E005D3784 /* NavigationViewController.swift in Sources */,
 				5B354DA3292921A60047F84A /* TaskControllerPublish.swift in Sources */,
