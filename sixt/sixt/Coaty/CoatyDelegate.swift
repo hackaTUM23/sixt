@@ -68,7 +68,7 @@ class CoatyDelegate: ObservableObject {
             )
             
             config.communication = CommunicationOptions(
-                namespace: "com.fa2022.ios",
+                namespace: "com.hackatum.sixt",
                 shouldEnableCrossNamespacing: true,
                 mqttClientOptions: mqttClientOptions,
                 shouldAutoStart: true

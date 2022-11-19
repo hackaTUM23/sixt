@@ -9,14 +9,17 @@ import Foundation
 import CoatySwift
 
 enum CoatyControllerType: String, CaseIterable {
-    case exampleControllerObserve = "ExampleControllerObserve"
+    case taskControllerPublish = "TaskControllerPublish"
+    case taskControllerObserve = "TaskControllerObserve"
 }
 
 extension CoatyControllerType {
     func getControllerType() -> Controller.Type {
         switch self {
-        case .exampleControllerObserve:
-            return ExampleControllerObserve.self
+        case .taskControllerPublish:
+            return TaskControllerPublish.self
+        case .taskControllerObserve:
+            return TaskControllerObserve.self
         }
     }
 }

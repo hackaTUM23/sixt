@@ -15,20 +15,25 @@
 		231C8902292844EF005D3784 /* CoatyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C8901292844EF005D3784 /* CoatyDelegate.swift */; };
 		231C89042928453A005D3784 /* CoatyControllerTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C89032928453A005D3784 /* CoatyControllerTypes.swift */; };
 		231C890629284569005D3784 /* CoatyObjectTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C890529284569005D3784 /* CoatyObjectTypes.swift */; };
-		231C890A292845D1005D3784 /* ExampleControllerObserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C8909292845D1005D3784 /* ExampleControllerObserve.swift */; };
 		231C890E29284615005D3784 /* ExampleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C890D29284615005D3784 /* ExampleObject.swift */; };
 		231C8913292849A4005D3784 /* MapHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C8912292849A4005D3784 /* MapHomeView.swift */; };
 		231C8915292849DD005D3784 /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C8914292849DD005D3784 /* MapViewRepresentable.swift */; };
 		231C891829284A3E005D3784 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C891729284A3E005D3784 /* MapViewController.swift */; };
-		231C891C2928DC33005D3784 /* MapboxNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 231C891B2928DC33005D3784 /* MapboxNavigation */; };
 		231C891E2928DC5E005D3784 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C891D2928DC5E005D3784 /* NavigationViewController.swift */; };
 		231C89202928DD96005D3784 /* NavigationViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C891F2928DD96005D3784 /* NavigationViewRepresentable.swift */; };
-		231C89232928E806005D3784 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 231C89222928E806005D3784 /* MapboxMaps */; };
 		231C89252928EDED005D3784 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C89242928EDED005D3784 /* LocationManager.swift */; };
 		231C89272928F1B2005D3784 /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C89262928F1B2005D3784 /* ToggleView.swift */; };
 		231C892A2928F702005D3784 /* UserState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C89292928F702005D3784 /* UserState.swift */; };
 		231C892C2928FC96005D3784 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C892B2928FC96005D3784 /* Model.swift */; };
 		231C893029291AE8005D3784 /* NavigationBottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C892F29291AE8005D3784 /* NavigationBottomBarView.swift */; };
+		5B020F2829292683003F078D /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 5B020F2729292683003F078D /* MapboxMaps */; };
+		5B020F2B29292690003F078D /* MapboxNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 5B020F2A29292690003F078D /* MapboxNavigation */; };
+		5B020F2E29292707003F078D /* NewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B020F2D29292706003F078D /* NewTaskView.swift */; };
+		5B020F302929275C003F078D /* ChargingStationIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B020F2F2929275C003F078D /* ChargingStationIcon.swift */; };
+		5B020F3329292786003F078D /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B020F3229292786003F078D /* ButtonStyles.swift */; };
+		5B354DA3292921A60047F84A /* TaskControllerPublish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B354DA2292921A60047F84A /* TaskControllerPublish.swift */; };
+		5B376DE529290ED30007CB9E /* ChargingTaskObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B376DE429290ED30007CB9E /* ChargingTaskObject.swift */; };
+		5B376DE7292912030007CB9E /* TaskControllerObserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B376DE6292912030007CB9E /* TaskControllerObserve.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +45,6 @@
 		231C8901292844EF005D3784 /* CoatyDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoatyDelegate.swift; sourceTree = "<group>"; };
 		231C89032928453A005D3784 /* CoatyControllerTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoatyControllerTypes.swift; sourceTree = "<group>"; };
 		231C890529284569005D3784 /* CoatyObjectTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoatyObjectTypes.swift; sourceTree = "<group>"; };
-		231C8909292845D1005D3784 /* ExampleControllerObserve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleControllerObserve.swift; sourceTree = "<group>"; };
 		231C890D29284615005D3784 /* ExampleObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleObject.swift; sourceTree = "<group>"; };
 		231C8912292849A4005D3784 /* MapHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapHomeView.swift; sourceTree = "<group>"; };
 		231C8914292849DD005D3784 /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
@@ -53,6 +57,14 @@
 		231C89292928F702005D3784 /* UserState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserState.swift; sourceTree = "<group>"; };
 		231C892B2928FC96005D3784 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		231C892F29291AE8005D3784 /* NavigationBottomBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBottomBarView.swift; sourceTree = "<group>"; };
+		5B020F2D29292706003F078D /* NewTaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
+		5B020F2F2929275C003F078D /* ChargingStationIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingStationIcon.swift; sourceTree = "<group>"; };
+		5B020F3229292786003F078D /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		5B354DA2292921A60047F84A /* TaskControllerPublish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskControllerPublish.swift; sourceTree = "<group>"; };
+		5B376DDF2928ED8D0007CB9E /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		5B376DE429290ED30007CB9E /* ChargingTaskObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingTaskObject.swift; sourceTree = "<group>"; };
+		5B376DE6292912030007CB9E /* TaskControllerObserve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskControllerObserve.swift; sourceTree = "<group>"; };
+		5BA2436A2928DFCD00916CC6 /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +72,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				231C89232928E806005D3784 /* MapboxMaps in Frameworks */,
+				5B020F2829292683003F078D /* MapboxMaps in Frameworks */,
+				5B020F2B29292690003F078D /* MapboxNavigation in Frameworks */,
 				231C88FF292844A0005D3784 /* CoatySwift in Frameworks */,
-				231C891C2928DC33005D3784 /* MapboxNavigation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +86,8 @@
 			children = (
 				231C88EE292843F9005D3784 /* sixt */,
 				231C88ED292843F9005D3784 /* Products */,
+				5B354DA12929210C0047F84A /* Recovered References */,
+				5B020F2929292690003F078D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				231C890D29284615005D3784 /* ExampleObject.swift */,
+				5B376DE429290ED30007CB9E /* ChargingTaskObject.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -131,7 +146,7 @@
 		231C8908292845A1005D3784 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				231C890C292845EA005D3784 /* Publish */,
+				5B376DE8292912B90007CB9E /* Publish */,
 				231C890B292845E2005D3784 /* Observe */,
 			);
 			path = Controllers;
@@ -140,21 +155,16 @@
 		231C890B292845E2005D3784 /* Observe */ = {
 			isa = PBXGroup;
 			children = (
-				231C8909292845D1005D3784 /* ExampleControllerObserve.swift */,
+				5B376DE6292912030007CB9E /* TaskControllerObserve.swift */,
 			);
 			path = Observe;
-			sourceTree = "<group>";
-		};
-		231C890C292845EA005D3784 /* Publish */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Publish;
 			sourceTree = "<group>";
 		};
 		231C89102928497A005D3784 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5B020F3129292778003F078D /* Styles */,
+				5B020F2C29292706003F078D /* Components */,
 				231C891129284983005D3784 /* Map */,
 			);
 			path = Views;
@@ -184,6 +194,47 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		5B020F2929292690003F078D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B020F2C29292706003F078D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5B020F2D29292706003F078D /* NewTaskView.swift */,
+				5B020F2F2929275C003F078D /* ChargingStationIcon.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5B020F3129292778003F078D /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				5B020F3229292786003F078D /* ButtonStyles.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		5B354DA12929210C0047F84A /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				5B376DDF2928ED8D0007CB9E /* ButtonStyles.swift */,
+				5BA2436A2928DFCD00916CC6 /* NewTaskView.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		5B376DE8292912B90007CB9E /* Publish */ = {
+			isa = PBXGroup;
+			children = (
+				5B354DA2292921A60047F84A /* TaskControllerPublish.swift */,
+			);
+			path = Publish;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -202,8 +253,8 @@
 			name = sixt;
 			packageProductDependencies = (
 				231C88FE292844A0005D3784 /* CoatySwift */,
-				231C891B2928DC33005D3784 /* MapboxNavigation */,
-				231C89222928E806005D3784 /* MapboxMaps */,
+				5B020F2729292683003F078D /* MapboxMaps */,
+				5B020F2A29292690003F078D /* MapboxNavigation */,
 			);
 			productName = sixt;
 			productReference = 231C88EC292843F9005D3784 /* sixt.app */;
@@ -236,7 +287,7 @@
 			packageReferences = (
 				231C88FD292844A0005D3784 /* XCRemoteSwiftPackageReference "coaty-swift" */,
 				231C891A2928DC33005D3784 /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */,
-				231C89212928E806005D3784 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */,
+				5B020F2629292683003F078D /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */,
 			);
 			productRefGroup = 231C88ED292843F9005D3784 /* Products */;
 			projectDirPath = "";
@@ -268,16 +319,23 @@
 				231C89202928DD96005D3784 /* NavigationViewRepresentable.swift in Sources */,
 				231C891E2928DC5E005D3784 /* NavigationViewController.swift in Sources */,
 				231C8913292849A4005D3784 /* MapHomeView.swift in Sources */,
+				5B354DA3292921A60047F84A /* TaskControllerPublish.swift in Sources */,
 				231C892C2928FC96005D3784 /* Model.swift in Sources */,
+				231C88F2292843F9005D3784 /* ContentView.swift in Sources */,
+				5B376DE7292912030007CB9E /* TaskControllerObserve.swift in Sources */,
+				5B020F302929275C003F078D /* ChargingStationIcon.swift in Sources */,
+				231C8913292849A4005D3784 /* MapHomeView.swift in Sources */,
 				231C8902292844EF005D3784 /* CoatyDelegate.swift in Sources */,
 				231C891829284A3E005D3784 /* MapViewController.swift in Sources */,
 				231C892A2928F702005D3784 /* UserState.swift in Sources */,
+				5B020F3329292786003F078D /* ButtonStyles.swift in Sources */,
 				231C89272928F1B2005D3784 /* ToggleView.swift in Sources */,
 				231C893029291AE8005D3784 /* NavigationBottomBarView.swift in Sources */,
 				231C89042928453A005D3784 /* CoatyControllerTypes.swift in Sources */,
+				5B376DE529290ED30007CB9E /* ChargingTaskObject.swift in Sources */,
 				231C8915292849DD005D3784 /* MapViewRepresentable.swift in Sources */,
 				231C88F0292843F9005D3784 /* sixtApp.swift in Sources */,
-				231C890A292845D1005D3784 /* ExampleControllerObserve.swift in Sources */,
+				5B020F2E29292707003F078D /* NewTaskView.swift in Sources */,
 				231C890629284569005D3784 /* CoatyObjectTypes.swift in Sources */,
 				231C890E29284615005D3784 /* ExampleObject.swift in Sources */,
 				231C89252928EDED005D3784 /* LocationManager.swift in Sources */,
@@ -501,7 +559,7 @@
 				kind = branch;
 			};
 		};
-		231C89212928E806005D3784 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */ = {
+		5B020F2629292683003F078D /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mapbox/mapbox-maps-ios.git";
 			requirement = {
@@ -517,15 +575,15 @@
 			package = 231C88FD292844A0005D3784 /* XCRemoteSwiftPackageReference "coaty-swift" */;
 			productName = CoatySwift;
 		};
-		231C891B2928DC33005D3784 /* MapboxNavigation */ = {
+		5B020F2729292683003F078D /* MapboxMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B020F2629292683003F078D /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */;
+			productName = MapboxMaps;
+		};
+		5B020F2A29292690003F078D /* MapboxNavigation */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 231C891A2928DC33005D3784 /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */;
 			productName = MapboxNavigation;
-		};
-		231C89222928E806005D3784 /* MapboxMaps */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 231C89212928E806005D3784 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */;
-			productName = MapboxMaps;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
