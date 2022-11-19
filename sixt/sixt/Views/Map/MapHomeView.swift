@@ -57,10 +57,6 @@ struct MapHomeView: View {
             }
         }.onChange(of: openToWork) { _ in
             if openToWork {
-<<<<<<< HEAD
-=======
-                print("asdf")
->>>>>>> 4b73a16a680d18640d91d908d515acd607e1c297
                 model.userState = .OpenToWork
             } else {
                 model.userState = .Idle
