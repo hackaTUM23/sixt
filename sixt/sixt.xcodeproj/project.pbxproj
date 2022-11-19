@@ -24,6 +24,7 @@
 		5B376DE02928ED8D0007CB9E /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B376DDF2928ED8D0007CB9E /* ButtonStyles.swift */; };
 		5B376DE32928F2340007CB9E /* ChargingTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B376DE22928F2340007CB9E /* ChargingTask.swift */; };
 		5BA2436B2928DFCD00916CC6 /* NewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2436A2928DFCD00916CC6 /* NewTaskView.swift */; };
+		65F6A68829291A0500FA1648 /* CarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F6A68729291A0500FA1648 /* CarDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		5B376DDF2928ED8D0007CB9E /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		5B376DE22928F2340007CB9E /* ChargingTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingTask.swift; sourceTree = "<group>"; };
 		5BA2436A2928DFCD00916CC6 /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
+		65F6A68729291A0500FA1648 /* CarDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				5BA2436A2928DFCD00916CC6 /* NewTaskView.swift */,
+				65F6A68729291A0500FA1648 /* CarDetailView.swift */,
 				5B376DDC2928E5940007CB9E /* CharginStationIcon.swift */,
 			);
 			path = Components;
@@ -274,6 +277,7 @@
 				231C890629284569005D3784 /* CoatyObjectTypes.swift in Sources */,
 				5B376DDD2928E5940007CB9E /* CharginStationIcon.swift in Sources */,
 				5B376DE32928F2340007CB9E /* ChargingTask.swift in Sources */,
+				65F6A68829291A0500FA1648 /* CarDetailView.swift in Sources */,
 				231C890E29284615005D3784 /* ExampleObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
