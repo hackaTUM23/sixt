@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct NewTaskView: View {
+    @EnvironmentObject var model: Model
+    @Binding var showTask: Bool
     let task: ChargingTask
     
     //    let departure: String
@@ -88,12 +90,12 @@ struct NewTaskView: View {
             
             HStack {
                 Button("Accept") {
-                    
+                    model.userState = .Working
                 }
                 .buttonStyle(FilledButton())
                 
                 Button("Reject") {
-                    
+                    self.showTask = false
                 }
                 .buttonStyle(OutlineButton())
             }.frame(minWidth: 0, maxWidth: .infinity)
@@ -111,9 +113,11 @@ struct NewTaskView: View {
 }
 
 struct NewTaskView_Previews: PreviewProvider {
+    @State static var showTask = true
+   
     static var previews: some View {
         NewTaskView(
-            task: ChargingTask(
+            showTask: $showTask, task: ChargingTask(
                 id: UUID(),
                 departure: LatLng(lat: 13, lng: 11),
                 destination:LatLng(lat: 13, lng: 11),
@@ -129,7 +133,7 @@ struct NewTaskView_Previews: PreviewProvider {
             )
         )
         NewTaskView(
-            task: EmergencyChargingTask(
+            showTask: $showTask, task: EmergencyChargingTask(
                 id: UUID(),
                 departure: LatLng(lat: 13, lng: 11),
                 destination: LatLng(lat: 13, lng: 11),
