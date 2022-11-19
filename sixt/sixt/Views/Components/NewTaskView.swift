@@ -93,6 +93,7 @@ struct NewTaskView: View {
                 
                 Button("Accept") {
                     model.userState = .Working
+                    model.currentTask = task
                     callBack()
                 }
                 .buttonStyle(OutlineButton())

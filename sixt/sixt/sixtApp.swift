@@ -29,7 +29,6 @@ struct sixtApp: App {
                 ) { _ in
                     self.delegate.shutdownContainer()
                 }
-                .environment(\.colorScheme, .dark)
         }
     }
 }
