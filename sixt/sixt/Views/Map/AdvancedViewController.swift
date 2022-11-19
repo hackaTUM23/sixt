@@ -116,7 +116,7 @@ class AdvancedViewController: UIViewController, NavigationMapViewDelegate, Navig
         
         let gesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
         navigationMapView.addGestureRecognizer(gesture)
-        
+        navigationMapView.backgroundColor = UIColor.clear
         view.addSubview(navigationMapView)
         view.setNeedsLayout()
     }
@@ -250,6 +250,7 @@ class AdvancedViewController: UIViewController, NavigationMapViewDelegate, Navig
             navigationViewController.navigationView.speedLimitView.alpha = 0.0
         },
                                                                                completion: { [weak self] _ in
+            navigationViewController.navigationService.stop()
             navigationViewController.dismiss(animated: false) {
                 guard let self = self else { return }
                 
@@ -274,15 +275,15 @@ class AdvancedViewController: UIViewController, NavigationMapViewDelegate, Navig
                 
                 //TODO: clear routes array
                 
-                 //Showcase originally requested routes.
-//                                if let routes = self.routes {
-//                                    let cameraOptions = CameraOptions(bearing: 0.0, pitch: 0.0)
-//                                    self.navigationMapView.showcase(routes,
-//                                                                    routesPresentationStyle: .all(shouldFit: true, cameraOptions: cameraOptions),
-//                                                                    animated: true,
-//                                                                    duration: duration)
-//                                }
-                                self.showNoRoute()
+                //Showcase originally requested routes.
+                //                                if let routes = self.routes {
+                //                                    let cameraOptions = CameraOptions(bearing: 0.0, pitch: 0.0)
+                //                                    self.navigationMapView.showcase(routes,
+                //                                                                    routesPresentationStyle: .all(shouldFit: true, cameraOptions: cameraOptions),
+                //                                                                    animated: true,
+                //                                                                    duration: duration)
+                //                                }
+                self.showNoRoute()
             }
         })
     }

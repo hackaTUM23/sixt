@@ -178,11 +178,13 @@ class CustomBottomBarViewController: ContainerViewController {
         let hostingController = UIHostingController(rootView: NavigationBottomBarView(onDismiss: {
             self.onDismiss()
         }).environmentObject(model))
+        hostingController.view.backgroundColor = UIColor.clear
         /// Add as a child of the current view controller.
         addChild(hostingController)
         
         /// Add the SwiftUI view to the view controller view hierarchy.
         view.addSubview(hostingController.view)
+        view?.layer.backgroundColor = UIColor.clear.cgColor
         
         /// Setup the constraints to update the SwiftUI view boundaries.
         hostingController.view.translatesAutoresizingMaskIntoConstraints = false
@@ -207,6 +209,10 @@ class CustomBottomBarViewController: ContainerViewController {
         if let superview = view.superview?.superview {
             view.bottomAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.bottomAnchor).isActive = true
         }
+    }
+    
+    override func viewDidLoad() {
+//        self.layer?.backgroundColor = UIColor.clear.cgColor()
     }
 }
     
