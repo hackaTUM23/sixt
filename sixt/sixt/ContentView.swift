@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var user: User = User()
+    @StateObject var model: Model = Model()
     
     var body: some View {
-        MapHomeView().environmentObject(user)
+        MapHomeView().environmentObject(model)
     }
 }
 

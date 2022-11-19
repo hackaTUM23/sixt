@@ -12,5 +12,7 @@ struct CoatyObjectType {
     
     static let allTypes = [
         ExampleCoatyObject.self,
+        ChargingTask.self,
+        EmergencyChargingTask.self,
     ]
 }
