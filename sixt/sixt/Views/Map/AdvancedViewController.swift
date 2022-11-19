@@ -261,6 +261,7 @@ class AdvancedViewController: UIViewController, NavigationMapViewDelegate, Navig
                 // of the user location indicator - revert to back to default look in preview mode.
                 self.navigationMapView.userLocationStyle = .puck2D()
                 self.model.userState = .OpenToWork
+                self.model.currentTask = nil
                 self.navHasStarted = false
                 
                 //TODO: clear routes array
