@@ -8,7 +8,7 @@
 import Foundation
 import CoatySwift
 
-struct CarDetails: Codable {
+struct CarDetails: Codable, Equatable {
     let manufacturer: String
     let model: String
     let color: String
@@ -16,7 +16,7 @@ struct CarDetails: Codable {
     let batteryPercentage: Double
 }
 
-struct LatLng: Codable {
+struct LatLng: Codable, Equatable {
     let lat: Double
     let lng: Double
 }
@@ -99,6 +99,17 @@ class ChargingTask: CoatyObject {
     }
 }
 
+extension ChargingTask: Equatable {
+    static func == (lhs: ChargingTask, rhs: ChargingTask) -> Bool {
+        return lhs.id == rhs.id
+        && lhs.departure == rhs.departure
+        && lhs.destination == rhs.destination
+        && lhs.car == rhs.car
+        && lhs.price == rhs.price
+        && lhs.estimatedDuration == rhs.estimatedDuration
+    }
+}
+
 class EmergencyChargingTask: ChargingTask {
     override class var objectType: String {
         return register(objectType: "EmergencyChargingTask", with: self)
@@ -143,5 +154,21 @@ class EmergencyChargingTask: ChargingTask {
         
         try container.encode(self.donatorCar, forKey: .donatorCar)
         try container.encode(self.donatorLocation, forKey: .donatorLocation)
+    }
+}
+
+extension EmergencyChargingTask {
+    static func == (lhs: EmergencyChargingTask, rhs: ChargingTask) -> Bool {
+        guard let rhs = rhs as? EmergencyChargingTask else {
+            return false
+        }
+        return lhs.id == rhs.id
+        && lhs.departure == rhs.departure
+        && lhs.destination == rhs.destination
+        && lhs.car == rhs.car
+        && lhs.price == rhs.price
+        && lhs.estimatedDuration == rhs.estimatedDuration
+        && lhs.donatorCar == rhs.donatorCar
+        && lhs.donatorLocation == rhs.donatorLocation
     }
 }

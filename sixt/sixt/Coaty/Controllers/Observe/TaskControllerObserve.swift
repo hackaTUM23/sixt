@@ -18,15 +18,17 @@ class TaskControllerObserve: Controller {
     
     private func observe() {
         try! self.communicationManager
-            .observeUpdate(withObjectType: ChargingTask.objectType)
+            .observeAdvertise(withObjectType: ChargingTask.objectType)
             .subscribe(onNext: { event in
                 let object = event.data.object as! ChargingTask
+                Model.shared.tasks.append(object)
             })
             .disposed(by: self.disposeBag)
         try! self.communicationManager
-            .observeUpdate(withObjectType: EmergencyChargingTask.objectType)
+            .observeAdvertise(withObjectType: EmergencyChargingTask.objectType)
             .subscribe(onNext: { event in
                 let object = event.data.object as! ChargingTask
+                Model.shared.tasks.append(object)
             })
             .disposed(by: self.disposeBag)
     }

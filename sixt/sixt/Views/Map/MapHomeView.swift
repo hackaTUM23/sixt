@@ -12,6 +12,8 @@ struct MapHomeView: View {
     
     @State var openToWork = false
     
+    @State var newChargingTask: ChargingTask? = nil
+    
     var body: some View {
         ZStack {
             MapViewRepresentable()
@@ -32,15 +34,20 @@ struct MapHomeView: View {
                 }
             case .OpenToWork:
                 VStack {
-                    HStack(alignment: .center) {
-                        Button(action: { model.userState = .Working }) {
-                            Text("Accept Task")
-                        }.padding(20)
-                    }.frame(maxWidth: .infinity)
-                        .background(Color.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 20))
-                        .padding()
-                        .padding(.horizontal, 40)
+                    if let newChargingTask {
+                        HStack(alignment: .center) {
+                            Button(action: { model.userState = .Working }) {
+                                Text("Accept Task \(newChargingTask.id)")
+                            }.padding(20)
+                            Button("Cancel") {
+                                self.newChargingTask = nil
+                            }
+                        }.frame(maxWidth: .infinity)
+                            .background(Color.white)
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            .padding()
+                            .padding(.horizontal, 40)
+                    }
                     Spacer()
                     HStack(alignment: .center) {
                         ToggleView(isOn: $openToWork) {
@@ -53,7 +60,7 @@ struct MapHomeView: View {
                         .padding(.horizontal, 40)
                 }
             case .Working:
-                NavigationViewRepresentable()//.environmentObject(model)
+                NavigationViewRepresentable()
             }
         }.onChange(of: openToWork) { _ in
             if openToWork {
@@ -63,6 +70,11 @@ struct MapHomeView: View {
             }
         }.onAppear {
             print("Re-render")
+        }
+        .onChange(of: model.tasks) { tasks in
+            if model.userState == .OpenToWork && self.newChargingTask == nil && !tasks.isEmpty {
+                self.newChargingTask = tasks.last
+            }
         }
     }
 }
