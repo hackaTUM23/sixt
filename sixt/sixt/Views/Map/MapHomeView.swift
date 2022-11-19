@@ -19,42 +19,38 @@ struct MapHomeView: View {
         ZStack {
             MapViewRepresentable()
                 .ignoresSafeArea(.all)
-            switch model.userState {
-            case .Idle:
+            
+            if let newChargingTask {
                 VStack {
-                    Spacer()
-                    HStack(alignment: .center) {
-                        ToggleView(isOn: $openToWork) {
-                            openToWork ? Color.orange : Color.gray
-                        }.frame(width: 60, height: 30).padding(30)
-                    }.frame(maxWidth: .infinity)
-                        .background(Color.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 20))
-                        .padding()
-                }
-            case .OpenToWork:
-                VStack {
-                    if let newChargingTask {
+                    ZStack {
+                        //                        BlurView()
                         HStack(alignment: .center) {
                             NewTaskView(callBack: { self.showTask = false }, task: newChargingTask)
                         }.frame(maxWidth: .infinity)
-                            .background(Color.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            .background(BlurView())
                             .padding()
                             .offset(y: self.showTask ? 0 : -400)
                             .animation(Animation.default, value: self.showTask)
                     }
                     Spacer()
-                    HStack(alignment: .center) {
-                        ToggleView(isOn: $openToWork) {
-                            openToWork ? Color.orange : Color.gray
-                        }.frame(width: 60, height: 30).padding(30)
-                    }.frame(maxWidth: .infinity)
-                        .background(Color.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 20))
-                        .padding()
                 }
-            case .Working:
+            }
+            
+            VStack {
+                Spacer()
+                HStack(alignment: .center) {
+                    ToggleView(isOn: $openToWork) {
+                        openToWork ? Color.orange : Color.gray
+                    }.frame(width: 60, height: 30).padding(30)
+                }.frame(maxWidth: .infinity)
+                    .background(BlurView())
+                    .padding()
+            }
+            
+            if case .Working = model.userState {
+                BlurView()
+                    .frame(width: 100, height: 100)
+                ProgressView()
                 NavigationViewRepresentable()
             }
         }.onChange(of: openToWork) { _ in

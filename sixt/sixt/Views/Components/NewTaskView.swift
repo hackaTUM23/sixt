@@ -93,6 +93,7 @@ struct NewTaskView: View {
                 
                 Button("Accept") {
                     model.userState = .Working
+                    callBack()
                 }
                 .buttonStyle(FilledButton())
             }.frame(minWidth: 0, maxWidth: .infinity)
