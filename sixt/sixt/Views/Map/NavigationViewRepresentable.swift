@@ -10,6 +10,8 @@ import UIKit
 import SwiftUI
 
 struct NavigationViewRepresentable: UIViewControllerRepresentable {
+    @EnvironmentObject var model: Model
+    
     typealias UIViewControllerType = NavViewController
     
 //    var duckies: [DuckieBot]

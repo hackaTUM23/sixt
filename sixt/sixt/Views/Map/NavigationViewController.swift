@@ -13,6 +13,16 @@ import CoreLocation
 import SwiftUI
 
 class NavViewController: UIViewController {
+    var model: Model = Model.shared
+    
+//    init(model: Model) {
+//        self.model = model
+//        super.init(nibName: nil, bundle: nil)
+//    }
+//
+//    required convenience init?(coder: NSCoder) {
+//        self.init(model: Model())
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -148,31 +158,47 @@ class CustomTopBarViewController: ContainerViewController {
 class CustomBottomBarViewController: ContainerViewController {
     
     weak var navigationViewController: NavigationViewController?
+    var model: Model = Model.shared
+    
+//    init(model: Model) {
+//        self.model = model
+//        super.init(nibName: nil, bundle: nil)
+//    }
+//
+//    required convenience init?(coder: NSCoder) {
+//        self.init(model: Model())
+//    }
     
     // Or you can implement your own UI elements
     lazy var bannerView: UIView = {
         let banner = UIHostingController(rootView: NavigationBottomBarView())
-//        banner.translatesAutoresizingMaskIntoConstraints = false
-//        banner.delegate = self
+        //        banner.translatesAutoresizingMaskIntoConstraints = false
+        //        banner.delegate = self
         
         return banner.view
     }()
     
     override func loadView() {
         super.loadView()
-        let bannerView = UIHostingController(rootView: NavigationBottomBarView())
-//        view.addSubview(bannerView)
-        addChild(bannerView)
-//        bannerView.view.frame = frame
-        view.addSubview(bannerView.view)
-        bannerView.didMove(toParent: self)
-        let safeArea = view.layoutMarginsGuide
-        NSLayoutConstraint.activate([
-            view.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
-            view.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor),
-            view.heightAnchor.constraint(equalTo: view.heightAnchor),
-            view.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor)
-        ])
+        let hostingController = UIHostingController(rootView: NavigationBottomBarView())//.environmentObject(model))
+        /// Add as a child of the current view controller.
+        addChild(hostingController)
+        
+        /// Add the SwiftUI view to the view controller view hierarchy.
+        view.addSubview(hostingController.view)
+        
+        /// Setup the constraints to update the SwiftUI view boundaries.
+        hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+        let constraints = [
+            hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            hostingController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            hostingController.view.heightAnchor.constraint(equalTo: view.heightAnchor),
+            hostingController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ]
+        NSLayoutConstraint.activate(constraints)
+        
+        /// Notify the hosting controller that it has been moved to the current view controller.
+        hostingController.didMove(toParent: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -190,8 +216,8 @@ class CustomBottomBarViewController: ContainerViewController {
     
     func navigationService(_ service: NavigationService, didUpdate progress: RouteProgress, with location: CLLocation, rawLocation: CLLocation) {
         // Update your controls manually
-//        bannerView.progress = Float(progress.fractionTraveled)
-//        bannerView.eta = "~\(Int(round(progress.durationRemaining / 60))) min"
+        //        bannerView.progress = Float(progress.fractionTraveled)
+        //        bannerView.eta = "~\(Int(round(progress.durationRemaining / 60))) min"
     }
     
 }

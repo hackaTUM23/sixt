@@ -8,5 +8,7 @@
 import Foundation
 
 class Model: ObservableObject {
+    static let shared: Model = Model()
+    
     @Published var userState: UserState = .Idle
 }

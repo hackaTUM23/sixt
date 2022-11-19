@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct NavigationBottomBarView: View {
+//    @EnvironmentObject var model: Model
+    @ObservedObject var model = Model.shared
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/).padding(50).background(Color.red)
+        Button(action: {
+            model.userState = .OpenToWork
+            model.objectWillChange.send()
+        }) {
+            Text("Abbort")
+        }.padding(50).background(Color.red)
     }
 }
 

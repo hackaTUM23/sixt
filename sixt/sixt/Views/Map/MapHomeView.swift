@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct MapHomeView: View {
-    @EnvironmentObject var user: User
+    @ObservedObject var model = Model.shared
+    
     @State var openToWork = false
     
     var body: some View {
         ZStack {
             MapViewRepresentable()
                 .ignoresSafeArea(.all)
-            switch user.userState {
+            switch model.userState {
             case .Idle:
                 VStack {
                     Spacer()
@@ -32,7 +33,7 @@ struct MapHomeView: View {
             case .OpenToWork:
                 VStack {
                     HStack(alignment: .center) {
-                        Button(action: { user.userState = .Working }) {
+                        Button(action: { model.userState = .Working }) {
                             Text("Accept Task")
                         }.padding(20)
                     }.frame(maxWidth: .infinity)
@@ -52,15 +53,16 @@ struct MapHomeView: View {
                         .padding(.horizontal, 40)
                 }
             case .Working:
-                NavigationViewRepresentable()
+                NavigationViewRepresentable()//.environmentObject(model)
             }
         }.onChange(of: openToWork) { _ in
             if openToWork {
-                print("asdf")
-                user.userState = .OpenToWork
+                model.userState = .OpenToWork
             } else {
-                user.userState = .Idle
+                model.userState = .Idle
             }
+        }.onAppear {
+            print("Re-render")
         }
     }
 }
