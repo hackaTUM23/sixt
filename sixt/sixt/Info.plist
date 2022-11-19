@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MBXAccessToken</key>
+	<string>sk.eyJ1Ijoibmlrb2xhaW1hZGxlbmVyIiwiYSI6ImNsYW5yZWFrbjBjcWQzdm52aTY1YXY1cjUifQ.74M2JdxAFbqvElCyuz6cxA</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+		<string>location</string>
+	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We need access to your location.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We need access to your location.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Test</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Test</string>
+</dict>
+</plist>

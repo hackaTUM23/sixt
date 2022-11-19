@@ -17,9 +17,18 @@
 		231C890629284569005D3784 /* CoatyObjectTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C890529284569005D3784 /* CoatyObjectTypes.swift */; };
 		231C890A292845D1005D3784 /* ExampleControllerObserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C8909292845D1005D3784 /* ExampleControllerObserve.swift */; };
 		231C890E29284615005D3784 /* ExampleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C890D29284615005D3784 /* ExampleObject.swift */; };
-		231C8913292849A4005D3784 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C8912292849A4005D3784 /* MapView.swift */; };
+		231C8913292849A4005D3784 /* MapHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C8912292849A4005D3784 /* MapHomeView.swift */; };
 		231C8915292849DD005D3784 /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C8914292849DD005D3784 /* MapViewRepresentable.swift */; };
 		231C891829284A3E005D3784 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C891729284A3E005D3784 /* MapViewController.swift */; };
+		231C891C2928DC33005D3784 /* MapboxNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 231C891B2928DC33005D3784 /* MapboxNavigation */; };
+		231C891E2928DC5E005D3784 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C891D2928DC5E005D3784 /* NavigationViewController.swift */; };
+		231C89202928DD96005D3784 /* NavigationViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C891F2928DD96005D3784 /* NavigationViewRepresentable.swift */; };
+		231C89232928E806005D3784 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 231C89222928E806005D3784 /* MapboxMaps */; };
+		231C89252928EDED005D3784 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C89242928EDED005D3784 /* LocationManager.swift */; };
+		231C89272928F1B2005D3784 /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C89262928F1B2005D3784 /* ToggleView.swift */; };
+		231C892A2928F702005D3784 /* UserState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C89292928F702005D3784 /* UserState.swift */; };
+		231C892C2928FC96005D3784 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C892B2928FC96005D3784 /* Model.swift */; };
+		231C893029291AE8005D3784 /* NavigationBottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C892F29291AE8005D3784 /* NavigationBottomBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,9 +42,17 @@
 		231C890529284569005D3784 /* CoatyObjectTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoatyObjectTypes.swift; sourceTree = "<group>"; };
 		231C8909292845D1005D3784 /* ExampleControllerObserve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleControllerObserve.swift; sourceTree = "<group>"; };
 		231C890D29284615005D3784 /* ExampleObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleObject.swift; sourceTree = "<group>"; };
-		231C8912292849A4005D3784 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		231C8912292849A4005D3784 /* MapHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapHomeView.swift; sourceTree = "<group>"; };
 		231C8914292849DD005D3784 /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
 		231C891729284A3E005D3784 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		231C89192928DB49005D3784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		231C891D2928DC5E005D3784 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		231C891F2928DD96005D3784 /* NavigationViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewRepresentable.swift; sourceTree = "<group>"; };
+		231C89242928EDED005D3784 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		231C89262928F1B2005D3784 /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
+		231C89292928F702005D3784 /* UserState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserState.swift; sourceTree = "<group>"; };
+		231C892B2928FC96005D3784 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		231C892F29291AE8005D3784 /* NavigationBottomBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBottomBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +60,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				231C89232928E806005D3784 /* MapboxMaps in Frameworks */,
 				231C88FF292844A0005D3784 /* CoatySwift in Frameworks */,
+				231C891C2928DC33005D3784 /* MapboxNavigation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +88,8 @@
 		231C88EE292843F9005D3784 /* sixt */ = {
 			isa = PBXGroup;
 			children = (
+				231C89282928F6F1005D3784 /* Model */,
+				231C89192928DB49005D3784 /* Info.plist */,
 				231C89102928497A005D3784 /* Views */,
 				231C8900292844D8005D3784 /* Coaty */,
 				231C88EF292843F9005D3784 /* sixtApp.swift */,
@@ -142,11 +163,25 @@
 		231C891129284983005D3784 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				231C8912292849A4005D3784 /* MapView.swift */,
+				231C8912292849A4005D3784 /* MapHomeView.swift */,
 				231C8914292849DD005D3784 /* MapViewRepresentable.swift */,
 				231C891729284A3E005D3784 /* MapViewController.swift */,
+				231C891D2928DC5E005D3784 /* NavigationViewController.swift */,
+				231C891F2928DD96005D3784 /* NavigationViewRepresentable.swift */,
+				231C89242928EDED005D3784 /* LocationManager.swift */,
+				231C89262928F1B2005D3784 /* ToggleView.swift */,
+				231C892F29291AE8005D3784 /* NavigationBottomBarView.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		231C89282928F6F1005D3784 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				231C89292928F702005D3784 /* UserState.swift */,
+				231C892B2928FC96005D3784 /* Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +202,8 @@
 			name = sixt;
 			packageProductDependencies = (
 				231C88FE292844A0005D3784 /* CoatySwift */,
+				231C891B2928DC33005D3784 /* MapboxNavigation */,
+				231C89222928E806005D3784 /* MapboxMaps */,
 			);
 			productName = sixt;
 			productReference = 231C88EC292843F9005D3784 /* sixt.app */;
@@ -198,6 +235,8 @@
 			mainGroup = 231C88E3292843F9005D3784;
 			packageReferences = (
 				231C88FD292844A0005D3784 /* XCRemoteSwiftPackageReference "coaty-swift" */,
+				231C891A2928DC33005D3784 /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */,
+				231C89212928E806005D3784 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */,
 			);
 			productRefGroup = 231C88ED292843F9005D3784 /* Products */;
 			projectDirPath = "";
@@ -226,15 +265,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				231C88F2292843F9005D3784 /* ContentView.swift in Sources */,
-				231C8913292849A4005D3784 /* MapView.swift in Sources */,
+				231C89202928DD96005D3784 /* NavigationViewRepresentable.swift in Sources */,
+				231C891E2928DC5E005D3784 /* NavigationViewController.swift in Sources */,
+				231C8913292849A4005D3784 /* MapHomeView.swift in Sources */,
+				231C892C2928FC96005D3784 /* Model.swift in Sources */,
 				231C8902292844EF005D3784 /* CoatyDelegate.swift in Sources */,
 				231C891829284A3E005D3784 /* MapViewController.swift in Sources */,
+				231C892A2928F702005D3784 /* UserState.swift in Sources */,
+				231C89272928F1B2005D3784 /* ToggleView.swift in Sources */,
+				231C893029291AE8005D3784 /* NavigationBottomBarView.swift in Sources */,
 				231C89042928453A005D3784 /* CoatyControllerTypes.swift in Sources */,
 				231C8915292849DD005D3784 /* MapViewRepresentable.swift in Sources */,
 				231C88F0292843F9005D3784 /* sixtApp.swift in Sources */,
 				231C890A292845D1005D3784 /* ExampleControllerObserve.swift in Sources */,
 				231C890629284569005D3784 /* CoatyObjectTypes.swift in Sources */,
 				231C890E29284615005D3784 /* ExampleObject.swift in Sources */,
+				231C89252928EDED005D3784 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,9 +409,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"sixt/Preview Content\"";
-				DEVELOPMENT_TEAM = UB7P88VGXV;
+				DEVELOPMENT_TEAM = 356PGZV9W9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = sixt/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -392,9 +439,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"sixt/Preview Content\"";
-				DEVELOPMENT_TEAM = UB7P88VGXV;
+				DEVELOPMENT_TEAM = 356PGZV9W9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = sixt/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -445,6 +493,22 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		231C891A2928DC33005D3784 /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/mapbox-navigation-ios.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		231C89212928E806005D3784 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/mapbox-maps-ios.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -452,6 +516,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 231C88FD292844A0005D3784 /* XCRemoteSwiftPackageReference "coaty-swift" */;
 			productName = CoatySwift;
+		};
+		231C891B2928DC33005D3784 /* MapboxNavigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 231C891A2928DC33005D3784 /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */;
+			productName = MapboxNavigation;
+		};
+		231C89222928E806005D3784 /* MapboxMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 231C89212928E806005D3784 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */;
+			productName = MapboxMaps;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

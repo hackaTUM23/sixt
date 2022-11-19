@@ -19,12 +19,93 @@
       }
     },
     {
+      "identity" : "mapbox-common-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mapbox/mapbox-common-ios.git",
+      "state" : {
+        "revision" : "9c387749d705972ffadb5ed60376cc3688f9d61b",
+        "version" : "23.2.0-rc.3"
+      }
+    },
+    {
+      "identity" : "mapbox-core-maps-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mapbox/mapbox-core-maps-ios.git",
+      "state" : {
+        "revision" : "120770014441b34327c6edda9f3be56183f7dc25",
+        "version" : "10.10.0-rc.1"
+      }
+    },
+    {
+      "identity" : "mapbox-directions-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mapbox/mapbox-directions-swift.git",
+      "state" : {
+        "revision" : "2f91fad31087e6c66bd7cc65f31095babb038493",
+        "version" : "2.8.0"
+      }
+    },
+    {
+      "identity" : "mapbox-events-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mapbox/mapbox-events-ios.git",
+      "state" : {
+        "revision" : "91ae071c0232c144251dfe0d0724525deaf293d4",
+        "version" : "1.0.10"
+      }
+    },
+    {
+      "identity" : "mapbox-maps-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mapbox/mapbox-maps-ios.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "35a93f5148f7451f9813e9b12de38fa77c694d71"
+      }
+    },
+    {
+      "identity" : "mapbox-navigation-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mapbox/mapbox-navigation-ios.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "390ffb0b748f4d98e21d5d5648e633367f563e80"
+      }
+    },
+    {
+      "identity" : "mapbox-navigation-native-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mapbox/mapbox-navigation-native-ios.git",
+      "state" : {
+        "revision" : "0b4c33bb80601eb1130fb85e3f3aec9d1f1253a7",
+        "version" : "121.0.0"
+      }
+    },
+    {
+      "identity" : "mapbox-speech-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mapbox/mapbox-speech-swift.git",
+      "state" : {
+        "revision" : "285622fa9734d4b28c9eca10fa59a47699ca39fd",
+        "version" : "2.1.0"
+      }
+    },
+    {
       "identity" : "mqttcocoaasyncsocket",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/leeway1208/MqttCocoaAsyncSocket",
       "state" : {
         "revision" : "8c61a10eab8c9bc3a4d28883c1a25f6a271400f2",
         "version" : "1.0.5"
+      }
+    },
+    {
+      "identity" : "polyline",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/raphaelmor/Polyline.git",
+      "state" : {
+        "revision" : "353f80378dcd8f17eefe8550090c6b1ae3c9da23",
+        "version" : "5.1.0"
       }
     },
     {
@@ -37,12 +118,39 @@
       }
     },
     {
+      "identity" : "solar",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ceeK/Solar.git",
+      "state" : {
+        "revision" : "c2b96f2d5fb7f835b91cefac5e83101f54643901",
+        "version" : "3.0.1"
+      }
+    },
+    {
       "identity" : "starscream",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/daltoniam/Starscream.git",
       "state" : {
         "revision" : "a063fda2b8145a231953c20e7a646be254365396",
         "version" : "3.1.2"
+      }
+    },
+    {
+      "identity" : "swift-argument-parser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-argument-parser",
+      "state" : {
+        "revision" : "fddd1c00396eed152c45a46bea9f47b98e59301d",
+        "version" : "1.2.0"
+      }
+    },
+    {
+      "identity" : "turf-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mapbox/turf-swift.git",
+      "state" : {
+        "revision" : "87b5b37108ba9f37f0885b586d8f6355d8240dd8",
+        "version" : "2.6.1"
       }
     },
     {
