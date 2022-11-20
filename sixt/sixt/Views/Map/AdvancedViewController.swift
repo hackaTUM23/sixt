@@ -28,12 +28,14 @@ class AdvancedViewController: UIViewController, NavigationMapViewDelegate, Navig
             switch Model.shared.userState {
             case .Working:
                 if let currentTask = Model.shared.currentTask, !self.navHasStarted {
-                    self.requestRoute(destination: CLLocationCoordinate2D(latitude: currentTask.destination.lat, longitude: currentTask.destination.lng))
+                    self.requestRoute(carLocation: CLLocationCoordinate2D(latitude: currentTask.departure.lat, longitude: currentTask.departure.lng),
+                                      destination: CLLocationCoordinate2D(latitude: currentTask.destination.lat, longitude: currentTask.destination.lng))
                     self.startNavigation()
                 }
             case .PreviewRoute:
                 if let currentTask = Model.shared.currentTask, !self.navHasStarted {
-                    self.requestRoute(destination: CLLocationCoordinate2D(latitude: currentTask.destination.lat, longitude: currentTask.destination.lng))
+                    self.requestRoute(carLocation: CLLocationCoordinate2D(latitude: currentTask.departure.lat, longitude: currentTask.departure.lng),
+                                      destination: CLLocationCoordinate2D(latitude: currentTask.destination.lat, longitude: currentTask.destination.lng))
                 }
             case .OpenToWork:
                 self.navigationMapView.removeRoutes()
@@ -202,7 +204,7 @@ class AdvancedViewController: UIViewController, NavigationMapViewDelegate, Navig
         //
     }
     
-    func requestRoute(destination: CLLocationCoordinate2D) {
+    func requestRoute(carLocation: CLLocationCoordinate2D, destination: CLLocationCoordinate2D) {
         guard let userLocation = navigationMapView.mapView.location.latestLocation else { return }
         
         let location = CLLocation(latitude: userLocation.coordinate.latitude,
@@ -213,8 +215,9 @@ class AdvancedViewController: UIViewController, NavigationMapViewDelegate, Navig
                                     name: "user")
         
         let destinationWaypoint = Waypoint(coordinate: destination)
+        let carLocationWaypoint = Waypoint(coordinate: carLocation)
         
-        let navigationRouteOptions = NavigationRouteOptions(waypoints: [userWaypoint, destinationWaypoint])
+        let navigationRouteOptions = NavigationRouteOptions(waypoints: [userWaypoint, carLocationWaypoint, destinationWaypoint])
         
         Directions.shared.calculate(navigationRouteOptions) { [weak self] (_, result) in
             switch result {
