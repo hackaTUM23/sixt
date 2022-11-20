@@ -12,6 +12,10 @@ struct NewTaskView: View {
     let callBack: () -> ()
     let task: ChargingTask
     
+    @State var departureAddress: String? = nil
+    @State var destinationAddress: String? = nil
+    @State var donationCarAddress: String? = nil
+    
     var totalPrice: String {
         let formatter = NumberFormatter()
         formatter.alwaysShowsDecimalSeparator = true
@@ -42,33 +46,50 @@ struct NewTaskView: View {
     var body: some View {
         VStack(alignment: .center) {
             Text("New task")
-                .font(.title)
-                .padding(.bottom)
+                .font(Font.title3)
+                .fontWeight(.bold)
+                .padding(.bottom, 5)
             
             VStack(alignment: .leading) {
-                if let emergencyTask = task as? EmergencyChargingTask {
+                HStack {
+                    Image(systemName: "mappin.and.ellipse")
+                    Text("Current location").lineLimit(1)
+                    
+                    Spacer()
+                }
+
+
+                if task is EmergencyChargingTask {
                     HStack {
-                        // really hacky way to ensure alignment is correct
-                        Image(systemName: "arrow.right").opacity(0)
-                        Text(emergencyTask.donatorLocation.description).lineLimit(1)
+                        Image(systemName: "arrow.right")
+                        Text(donationCarAddress ?? "Boltzmannstr. 3").lineLimit(1)
+                        
+                        Spacer()
+                        
+                        Text(donorCarBatteryPercentage)
+                        Image(systemName: "battery.75")
                         Image(systemName: "car.side")
-                        Label(donorCarBatteryPercentage, systemImage: "battery.75")
                     }
                 }
                 
                 HStack {
                     Image(systemName: "arrow.right")
-                        .opacity(task is EmergencyChargingTask ? 1 : 0)
                     
-                    Text(task.departure.description).lineLimit(1)
+                    Text(departureAddress ?? "Arcisstr. 10").lineLimit(1)
+                    
+                    Spacer()
+                    
+                    Text(carBatteryPercentage)
+                    Image(systemName: "battery.25")
                     Image(systemName: "car.side.and.exclamationmark")
-                    
-                    Label(carBatteryPercentage, systemImage: "battery.25")
                 }
                 
                 HStack {
                     Image(systemName: "arrow.right")
-                    Text(task.destination.description).lineLimit(1)
+                    Text(destinationAddress ?? "Leipartstr. 13").lineLimit(1)
+                    
+                    Spacer()
+                    
                     ChargingStationIcon()
                 }
             }
@@ -87,32 +108,66 @@ struct NewTaskView: View {
             
             HStack {
                 Button("Reject") {
+                    model.userState = .OpenToWork
                     callBack()
                 }
                 .buttonStyle(OutlineButton())
                 
                 Button("Accept") {
                     model.userState = .Working
+                    model.currentTask = task
                     callBack()
                 }
-                .buttonStyle(OutlineButton())
+                .buttonStyle(FilledButton())
             }.frame(minWidth: 0, maxWidth: .infinity)
             
             VStack {
                 Button("Show more details") {
-                    
+                    model.userState = .PreviewRoute
+                    model.currentTask = task
                 }
             }.frame(minWidth: 0, maxWidth: .infinity)
             
             
         }
         .padding()
+        .onAppear {
+            reverseGeocode(task.departure, { departureAddress = $0 })
+            reverseGeocode(task.destination, { destinationAddress = $0 })
+            if let emergencyTask = task as? EmergencyChargingTask {
+                reverseGeocode(emergencyTask.donatorLocation, { donationCarAddress = $0 })
+            }
+        }
+    }
+    
+    private func reverseGeocode(_ latLng: LatLng, _ onLoad: @escaping (_ address: String) -> Void) {
+        guard let url = URL(string: "https://api.mapbox.com/geocoding/v5/mapbox.places/\(latLng.lng),\(latLng.lat).json?access_token=pk.eyJ1Ijoibmlrb2xhaW1hZGxlbmVyIiwiYSI6ImNraHRjb3R2ajA5ZGwyeXA1dGkxcWl4OHIifQ.kOZjT1J1HaZQheEttRY1Mw") else {
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { data, _, error in
+            if let error {
+                print("Got error when requesting geocoding: \(error)")
+            }
+            
+            guard let data, let geoCodingResult = try? JSONDecoder().decode(GeoCodingResult.self, from: data) else {
+                return
+            }
+            
+            guard let feature = geoCodingResult.features.first(where: { f in
+                f.placeType.contains("address")
+            }) else {
+                return
+            }
+            
+            onLoad("\(feature.text) \(feature.address ?? "")")
+        }.resume()
     }
 }
 
 struct NewTaskView_Previews: PreviewProvider {
     @State static var showTask = true
-   
+
     static var previews: some View {
         NewTaskView(
             callBack: {}, task: ChargingTask(

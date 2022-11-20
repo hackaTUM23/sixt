@@ -27,9 +27,11 @@ struct ToggleView<Content: View>: View {
                     if let toggleButton = toggleButton {
                         toggleButton
                             .clipShape(Circle())
-                    }else {
+                    } else {
                         Circle()
-                            .fill(Color.white)
+                            .fill(.white.opacity(0))
+                            .background(AnimatedBackground())
+                            .clipShape(Circle())
                     }
                 }.padding(2.5)
                 .frame(width: reader.frame(in: .global).height)

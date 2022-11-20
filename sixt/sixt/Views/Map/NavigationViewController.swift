@@ -1,85 +1,85 @@
+////
+////  NavigationViewController.swift
+////  sixt
+////
+////  Created by Nikolai Madlener on 19.11.22.
+////
 //
-//  NavigationViewController.swift
-//  sixt
-//
-//  Created by Nikolai Madlener on 19.11.22.
-//
-
 import UIKit
 import MapboxDirections
 import MapboxCoreNavigation
 import MapboxNavigation
 import CoreLocation
 import SwiftUI
-
-class NavViewController: UIViewController {
-    let model: Model
-    
-    init(model: Model) {
-        self.model = model
-        super.init(nibName: nil, bundle: nil)
-    }
-
-    required convenience init?(coder: NSCoder) {
-        self.init(model: Model.shared)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        LocationManager.shared.requestLocationAuthorization()
-        
-        // Define two waypoints to travel between
-        let origin = Waypoint(coordinate: CLLocationCoordinate2D(latitude: 48.249999, longitude: 11.6499974), name: "TUM CIT")
-        let destination = Waypoint(coordinate: CLLocationCoordinate2D(latitude: 47.373878, longitude: 8.545094), name: "Sixt München")
-        
-        // Set options
-        let routeOptions = NavigationRouteOptions(waypoints: [origin, destination])
-        routeOptions.distanceMeasurementSystem = .metric
-        
-        // Request a route using MapboxDirections.swift
-        Directions.shared.calculate(routeOptions) { [weak self] (session, result) in
-            switch result {
-            case .failure(let error):
-                print(error.localizedDescription)
-            case .success(let response):
-                guard let self = self else { return }
-                let topBanner = CustomTopBarViewController()
-                let bottomBanner = CustomBottomBarViewController(model: self.model, onDismiss: {
-                    self.presentedViewController?.dismiss(animated: true)
-                })
-                let navigationOptions = NavigationOptions(styles: [CustomDayStyle()], topBanner: topBanner, bottomBanner: bottomBanner)
-                
-                // Pass the first generated route to the the NavigationViewController
-                let viewController = NavigationViewController(for: response, routeIndex: 0, routeOptions: routeOptions, navigationOptions: navigationOptions)
-                
-                viewController.floatingButtons?.removeAll()
-                viewController.showsSpeedLimits = false
-                viewController.modalPresentationStyle = .fullScreen
-                self.present(viewController, animated: true, completion: nil)
-            }
-            
-        }
-    }
-}
-
-class CustomDayStyle: DayStyle {
-    
-    required init() {
-        super.init()
-        
-        // Use a custom map style.
-        mapStyleURL = URL(string: "mapbox://styles/kitesagates/clao22p31001s14phtihl44g6")!
-        previewMapStyleURL = URL(string: "mapbox://styles/kitesagates/clao22p31001s14phtihl44g6")!
-        
-        // Specify that the style should be used during the day.
-        styleType = .day
-    }
-    
-    override func apply() {
-        super.apply()
-    }
-}
-
+//
+//class NavViewController: UIViewController {
+//    let model: Model
+//    
+//    init(model: Model) {
+//        self.model = model
+//        super.init(nibName: nil, bundle: nil)
+//    }
+//
+//    required convenience init?(coder: NSCoder) {
+//        self.init(model: Model.shared)
+//    }
+//    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        LocationManager.shared.requestLocationAuthorization()
+//        
+//        // Define two waypoints to travel between
+//        let origin = Waypoint(coordinate: CLLocationCoordinate2D(latitude: 48.249999, longitude: 11.6499974), name: "TUM CIT")
+//        let destination = Waypoint(coordinate: CLLocationCoordinate2D(latitude: 47.373878, longitude: 8.545094), name: "Sixt München")
+//        
+//        // Set options
+//        let routeOptions = NavigationRouteOptions(waypoints: [origin, destination])
+//        routeOptions.distanceMeasurementSystem = .metric
+//        
+//        // Request a route using MapboxDirections.swift
+//        Directions.shared.calculate(routeOptions) { [weak self] (session, result) in
+//            switch result {
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            case .success(let response):
+//                guard let self = self else { return }
+//                let topBanner = CustomTopBarViewController()
+//                let bottomBanner = CustomBottomBarViewController(model: self.model, onDismiss: {
+//                    self.presentedViewController?.dismiss(animated: true)
+//                })
+//                let navigationOptions = NavigationOptions(styles: [CustomDayStyle()], topBanner: topBanner, bottomBanner: bottomBanner)
+//                
+//                // Pass the first generated route to the the NavigationViewController
+//                let viewController = NavigationViewController(for: response, routeIndex: 0, routeOptions: routeOptions, navigationOptions: navigationOptions)
+//                
+//                viewController.floatingButtons?.removeAll()
+//                viewController.showsSpeedLimits = false
+//                viewController.modalPresentationStyle = .fullScreen
+//                self.present(viewController, animated: true, completion: nil)
+//            }
+//            
+//        }
+//    }
+//}
+//
+//class CustomDayStyle: DayStyle {
+//    
+//    required init() {
+//        super.init()
+//        
+//        // Use a custom map style.
+//        mapStyleURL = URL(string: "mapbox://styles/kitesagates/clao22p31001s14phtihl44g6")!
+//        previewMapStyleURL = URL(string: "mapbox://styles/kitesagates/clao22p31001s14phtihl44g6")!
+//        
+//        // Specify that the style should be used during the day.
+//        styleType = .day
+//    }
+//    
+//    override func apply() {
+//        super.apply()
+//    }
+//}
+//
 class CustomTopBarViewController: ContainerViewController {
     private lazy var instructionsBannerTopOffsetConstraint = {
         return instructionsBannerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10)
@@ -168,7 +168,7 @@ class CustomBottomBarViewController: ContainerViewController {
         self.onDismiss = onDismiss
         super.init(nibName: nil, bundle: nil)
     }
-
+    
     required convenience init?(coder: NSCoder) {
         self.init(model: Model.shared, onDismiss: {})
     }
@@ -178,12 +178,17 @@ class CustomBottomBarViewController: ContainerViewController {
         let hostingController = UIHostingController(rootView: NavigationBottomBarView(onDismiss: {
             self.onDismiss()
         }).environmentObject(model))
+//        hostingController.view.backgroundColor = UIColor.clear
+        hostingController.view.backgroundColor = UIColor.clear
+        hostingController.view.layer.cornerRadius = 20
+        hostingController.view.layer.masksToBounds = true
+    
         /// Add as a child of the current view controller.
         addChild(hostingController)
         
         /// Add the SwiftUI view to the view controller view hierarchy.
         view.addSubview(hostingController.view)
-        
+
         /// Setup the constraints to update the SwiftUI view boundaries.
         hostingController.view.translatesAutoresizingMaskIntoConstraints = false
         let constraints = [
@@ -209,12 +214,17 @@ class CustomBottomBarViewController: ContainerViewController {
         }
     }
     
-    // MARK: - NavigationServiceDelegate implementation
-    
-    func navigationService(_ service: NavigationService, didUpdate progress: RouteProgress, with location: CLLocation, rawLocation: CLLocation) {
-        // Update your controls manually
-        //        bannerView.progress = Float(progress.fractionTraveled)
-        //        bannerView.eta = "~\(Int(round(progress.durationRemaining / 60))) min"
+    override func viewDidLoad() {
+//        self.layer?.backgroundColor = UIColor.clear.cgColor()
     }
-    
 }
+    
+//    // MARK: - NavigationServiceDelegate implementation
+//    
+//    func navigationService(_ service: NavigationService, didUpdate progress: RouteProgress, with location: CLLocation, rawLocation: CLLocation) {
+//        // Update your controls manually
+//        //        bannerView.progress = Float(progress.fractionTraveled)
+//        //        bannerView.eta = "~\(Int(round(progress.durationRemaining / 60))) min"
+//    }
+//    
+//}

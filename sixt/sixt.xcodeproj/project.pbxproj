@@ -24,6 +24,9 @@
 		231C892A2928F702005D3784 /* UserState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C89292928F702005D3784 /* UserState.swift */; };
 		231C892C2928FC96005D3784 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C892B2928FC96005D3784 /* Model.swift */; };
 		231C893029291AE8005D3784 /* NavigationBottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C892F29291AE8005D3784 /* NavigationBottomBarView.swift */; };
+		231C893229294097005D3784 /* AnimatedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C893129294097005D3784 /* AnimatedBackground.swift */; };
+		231C89342929621C005D3784 /* AdvancedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C89332929621C005D3784 /* AdvancedViewController.swift */; };
+		42E4C6392929C32000D60CDF /* HomeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E4C6382929C32000D60CDF /* HomeButtonView.swift */; };
 		5B020F2829292683003F078D /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 5B020F2729292683003F078D /* MapboxMaps */; };
 		5B020F2B29292690003F078D /* MapboxNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 5B020F2A29292690003F078D /* MapboxNavigation */; };
 		5B020F2E29292707003F078D /* NewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B020F2D29292706003F078D /* NewTaskView.swift */; };
@@ -36,6 +39,7 @@
 		5B376DE529290ED30007CB9E /* ChargingTaskObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B376DE429290ED30007CB9E /* ChargingTaskObject.swift */; };
 		5B376DE7292912030007CB9E /* TaskControllerObserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B376DE6292912030007CB9E /* TaskControllerObserve.swift */; };
 		5BC50D2C29296314002CC89A /* CarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC50D2B29296314002CC89A /* CarDetailView.swift */; };
+		5BCF710D2929AA0B0010F4CB /* GeoCodingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF710C2929AA0B0010F4CB /* GeoCodingResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +63,9 @@
 		231C89292928F702005D3784 /* UserState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserState.swift; sourceTree = "<group>"; };
 		231C892B2928FC96005D3784 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		231C892F29291AE8005D3784 /* NavigationBottomBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBottomBarView.swift; sourceTree = "<group>"; };
+		231C893129294097005D3784 /* AnimatedBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedBackground.swift; sourceTree = "<group>"; };
+		231C89332929621C005D3784 /* AdvancedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedViewController.swift; sourceTree = "<group>"; };
+		42E4C6382929C32000D60CDF /* HomeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtonView.swift; sourceTree = "<group>"; };
 		5B020F2D29292706003F078D /* NewTaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
 		5B020F2F2929275C003F078D /* ChargingStationIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingStationIcon.swift; sourceTree = "<group>"; };
 		5B020F3229292786003F078D /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
@@ -69,6 +76,7 @@
 		5B376DE6292912030007CB9E /* TaskControllerObserve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskControllerObserve.swift; sourceTree = "<group>"; };
 		5BA2436A2928DFCD00916CC6 /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
 		5BC50D2B29296314002CC89A /* CarDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailView.swift; sourceTree = "<group>"; };
+		5BCF710C2929AA0B0010F4CB /* GeoCodingResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoCodingResult.swift; sourceTree = "<group>"; };
 		65F6A68729291A0500FA1648 /* CarDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,6 +194,7 @@
 				231C89242928EDED005D3784 /* LocationManager.swift */,
 				231C89262928F1B2005D3784 /* ToggleView.swift */,
 				231C892F29291AE8005D3784 /* NavigationBottomBarView.swift */,
+				231C89332929621C005D3784 /* AdvancedViewController.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -195,6 +204,7 @@
 			children = (
 				231C89292928F702005D3784 /* UserState.swift */,
 				231C892B2928FC96005D3784 /* Model.swift */,
+				5BCF710C2929AA0B0010F4CB /* GeoCodingResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -212,7 +222,9 @@
 				5B020F2D29292706003F078D /* NewTaskView.swift */,
 				5BC50D2B29296314002CC89A /* CarDetailView.swift */,
 				5B020F2F2929275C003F078D /* ChargingStationIcon.swift */,
+				231C893129294097005D3784 /* AnimatedBackground.swift */,
 				5B020F36292943A6003F078D /* BlurView.swift */,
+				42E4C6382929C32000D60CDF /* HomeButtonView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -324,11 +336,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B020F352929339E003F078D /* MapHomeView.swift in Sources */,
+				231C89342929621C005D3784 /* AdvancedViewController.swift in Sources */,
 				5B020F342929339A003F078D /* ContentView.swift in Sources */,
 				5B020F37292943A6003F078D /* BlurView.swift in Sources */,
 				231C89202928DD96005D3784 /* NavigationViewRepresentable.swift in Sources */,
+				231C893229294097005D3784 /* AnimatedBackground.swift in Sources */,
 				231C891E2928DC5E005D3784 /* NavigationViewController.swift in Sources */,
 				5B354DA3292921A60047F84A /* TaskControllerPublish.swift in Sources */,
+				42E4C6392929C32000D60CDF /* HomeButtonView.swift in Sources */,
 				231C892C2928FC96005D3784 /* Model.swift in Sources */,
 				5B376DE7292912030007CB9E /* TaskControllerObserve.swift in Sources */,
 				5B020F302929275C003F078D /* ChargingStationIcon.swift in Sources */,
@@ -341,6 +356,7 @@
 				231C893029291AE8005D3784 /* NavigationBottomBarView.swift in Sources */,
 				231C89042928453A005D3784 /* CoatyControllerTypes.swift in Sources */,
 				5B376DE529290ED30007CB9E /* ChargingTaskObject.swift in Sources */,
+				5BCF710D2929AA0B0010F4CB /* GeoCodingResult.swift in Sources */,
 				231C8915292849DD005D3784 /* MapViewRepresentable.swift in Sources */,
 				231C88F0292843F9005D3784 /* sixtApp.swift in Sources */,
 				5B020F2E29292707003F078D /* NewTaskView.swift in Sources */,

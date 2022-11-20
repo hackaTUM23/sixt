@@ -9,21 +9,21 @@ import Foundation
 import UIKit
 import SwiftUI
 
-struct NavigationViewRepresentable: UIViewControllerRepresentable {
-    @EnvironmentObject var model: Model
-    
-    typealias UIViewControllerType = NavViewController
-    
-//    var duckies: [DuckieBot]
-    
-    func makeUIViewController(context: Context) -> NavViewController {
-        return NavViewController(model: model)
-    }
-    
-    func updateUIViewController(_ uiViewController: NavViewController, context: Context) {
-//        uiViewController.duckies = duckies
-//        uiViewController.destinations = destinations
-//        uiViewController.chargers = chargers
-    }
-    
-}
+//struct NavigationViewRepresentable: UIViewControllerRepresentable {
+//    @EnvironmentObject var model: Model
+//    
+//    typealias UIViewControllerType = NavViewController
+//    
+////    var duckies: [DuckieBot]
+//    
+//    func makeUIViewController(context: Context) -> NavViewController {
+//        return NavViewController(model: model)
+//    }
+//    
+//    func updateUIViewController(_ uiViewController: NavViewController, context: Context) {
+////        uiViewController.duckies = duckies
+////        uiViewController.destinations = destinations
+////        uiViewController.chargers = chargers
+//    }
+//    
+//}
