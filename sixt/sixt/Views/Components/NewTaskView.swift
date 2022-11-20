@@ -51,10 +51,17 @@ struct NewTaskView: View {
                 .padding(.bottom, 5)
             
             VStack(alignment: .leading) {
+                HStack {
+                    Image(systemName: "mappin.and.ellipse")
+                    Text("Current location").lineLimit(1)
+                    
+                    Spacer()
+                }
+
+
                 if task is EmergencyChargingTask {
                     HStack {
-                        // really hacky way to ensure alignment is correct
-                        Image(systemName: "arrow.right").opacity(0)
+                        Image(systemName: "arrow.right")
                         Text(donationCarAddress ?? "Boltzmannstr. 3").lineLimit(1)
                         
                         Spacer()
@@ -67,7 +74,6 @@ struct NewTaskView: View {
                 
                 HStack {
                     Image(systemName: "arrow.right")
-                        .opacity(task is EmergencyChargingTask ? 1 : 0)
                     
                     Text(departureAddress ?? "Arcisstr. 10").lineLimit(1)
                     
