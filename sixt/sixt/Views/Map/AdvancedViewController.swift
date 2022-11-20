@@ -28,13 +28,31 @@ class AdvancedViewController: UIViewController, NavigationMapViewDelegate, Navig
             switch Model.shared.userState {
             case .Working:
                 if let currentTask = Model.shared.currentTask, !self.navHasStarted {
+                    let emergencyTask = currentTask as? EmergencyChargingTask
+                    let car2Location: CLLocationCoordinate2D?
+                    if let emergencyTask {
+                        car2Location = CLLocationCoordinate2D(latitude: emergencyTask.donatorLocation.lat, longitude: emergencyTask.donatorLocation.lng)
+                    } else {
+                        car2Location = nil
+                    }
+        
                     self.requestRoute(carLocation: CLLocationCoordinate2D(latitude: currentTask.departure.lat, longitude: currentTask.departure.lng),
+                                      car2Location: car2Location,
                                       destination: CLLocationCoordinate2D(latitude: currentTask.destination.lat, longitude: currentTask.destination.lng))
                     self.startNavigation()
                 }
             case .PreviewRoute:
                 if let currentTask = Model.shared.currentTask, !self.navHasStarted {
+                    let emergencyTask = currentTask as? EmergencyChargingTask
+                    let car2Location: CLLocationCoordinate2D?
+                    if let emergencyTask {
+                        car2Location = CLLocationCoordinate2D(latitude: emergencyTask.departure.lat, longitude: emergencyTask.departure.lng)
+                    } else {
+                        car2Location = nil
+                    }
+        
                     self.requestRoute(carLocation: CLLocationCoordinate2D(latitude: currentTask.departure.lat, longitude: currentTask.departure.lng),
+                                      car2Location: car2Location,
                                       destination: CLLocationCoordinate2D(latitude: currentTask.destination.lat, longitude: currentTask.destination.lng))
                 }
             case .OpenToWork:
@@ -204,7 +222,7 @@ class AdvancedViewController: UIViewController, NavigationMapViewDelegate, Navig
         //
     }
     
-    func requestRoute(carLocation: CLLocationCoordinate2D, destination: CLLocationCoordinate2D) {
+    func requestRoute(carLocation: CLLocationCoordinate2D, car2Location: CLLocationCoordinate2D?, destination: CLLocationCoordinate2D) {
         guard let userLocation = navigationMapView.mapView.location.latestLocation else { return }
         
         let location = CLLocation(latitude: userLocation.coordinate.latitude,
@@ -216,8 +234,11 @@ class AdvancedViewController: UIViewController, NavigationMapViewDelegate, Navig
         
         let destinationWaypoint = Waypoint(coordinate: destination)
         let carLocationWaypoint = Waypoint(coordinate: carLocation)
-        
-        let navigationRouteOptions = NavigationRouteOptions(waypoints: [userWaypoint, carLocationWaypoint, destinationWaypoint])
+        var wayPoints: [Waypoint] = [userWaypoint, carLocationWaypoint, destinationWaypoint]
+        if let car2Location {
+            wayPoints.insert(Waypoint(coordinate: car2Location), at: 1)
+        }
+        let navigationRouteOptions = NavigationRouteOptions(waypoints: wayPoints)
         
         Directions.shared.calculate(navigationRouteOptions) { [weak self] (_, result) in
             switch result {
