@@ -49,6 +49,7 @@ struct NavigationBottomBarView: View {
         .padding(50)
         .frame(maxWidth: .infinity)
         .background(BlurView())
+        .clipShape(RoundedRectangle(cornerRadius: 20))
         .padding()
     }
 }

@@ -76,9 +76,10 @@ struct CarDetailView: View {
                     isLocked.toggle()
                     onLockCar(isLocked)
                 } label: {
-                    Image(systemName: isLocked ? "lock" : "lock.open").frame(width: 50)
+                    Image(systemName: isLocked ? "lock" : "lock.open")
+                        .frame(width: 50, height: 20)
                 }
-                .tint(isLocked ? .red : .green)
+                .tint(isLocked ? .accentColor : .green)
                 .buttonStyle(.borderedProminent)
                 
                 Spacer().frame(width: 20)
@@ -96,7 +97,7 @@ struct CarDetailView: View {
                     }
                 } label: {
                     Image(systemName: isLightOn ? "lightbulb" : "lightbulb.slash")
-                        .frame(width: 50)
+                        .frame(width: 50, height: 20)
                 }
                 .tint(isLightOn ? .yellow : .secondary)
                 .buttonStyle(.borderedProminent)
@@ -107,10 +108,10 @@ struct CarDetailView: View {
                     onCancel()
                 } label: {
                     Image(systemName: "xmark")
-                        .frame(width: 50)
+                        .frame(width: 50, height: 20)
                 }
                 .tint(.red)
-                .buttonStyle(.bordered)
+                .buttonStyle(.borderedProminent)
                 
             }
         }
