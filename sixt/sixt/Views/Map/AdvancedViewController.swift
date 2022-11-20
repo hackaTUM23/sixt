@@ -31,6 +31,14 @@ class AdvancedViewController: UIViewController, NavigationMapViewDelegate, Navig
                     self.requestRoute(destination: CLLocationCoordinate2D(latitude: currentTask.destination.lat, longitude: currentTask.destination.lng))
                     self.startNavigation()
                 }
+            case .PreviewRoute:
+                if let currentTask = Model.shared.currentTask, !self.navHasStarted {
+                    self.requestRoute(destination: CLLocationCoordinate2D(latitude: currentTask.destination.lat, longitude: currentTask.destination.lng))
+                }
+            case .OpenToWork:
+                self.navigationMapView.removeRoutes()
+                self.navigationMapView.removeWaypoints()
+                self.navigationMapView.removeArrow()
             default:
                 print("")
             }
@@ -219,8 +227,29 @@ class AdvancedViewController: UIViewController, NavigationMapViewDelegate, Navig
                 self.routeResponse = response
                 if let routes = self.routes,
                    let currentRoute = self.currentRoute {
-                    self.navigationMapView.show(routes)
+                    
+                    let navigationViewportDataSource = NavigationViewportDataSource(self.navigationMapView.mapView, viewportDataSourceType: .raw)
+                    navigationViewportDataSource.options.followingCameraOptions.zoomUpdatesAllowed = true
+              
+                    let camOp = CameraOptions(padding: UIEdgeInsets(
+                        top: 400,
+                        left: 40,
+                        bottom: 200,
+                        right: 40.0
+                    ))
+                    
+                    self.navigationMapView.navigationCamera.viewportDataSource = navigationViewportDataSource
+                    
+//                    self.navigationMapView.show(routes)
                     self.navigationMapView.showWaypoints(on: currentRoute)
+        
+                    if let routes = self.routes {
+                        let cameraOptions = CameraOptions(bearing: 0.0, pitch: 0.0)
+                        self.navigationMapView.showcase(routes,
+                                                        routesPresentationStyle: .all(shouldFit: true, cameraOptions: camOp),
+                                                        animated: true,
+                                                        duration: 1.0)
+                    }
                 }
             }
         }

@@ -11,4 +11,5 @@ enum UserState: Equatable {
     case Idle
     case OpenToWork
     case Working
+    case PreviewRoute
 }

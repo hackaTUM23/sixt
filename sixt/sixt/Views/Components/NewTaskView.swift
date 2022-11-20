@@ -88,6 +88,7 @@ struct NewTaskView: View {
             
             HStack {
                 Button("Reject") {
+                    model.userState = .OpenToWork
                     callBack()
                 }
                 .buttonStyle(OutlineButton())
@@ -102,7 +103,8 @@ struct NewTaskView: View {
             
             VStack {
                 Button("Show more details") {
-                    
+                    model.userState = .PreviewRoute
+                    model.currentTask = task
                 }
             }.frame(minWidth: 0, maxWidth: .infinity)
             
