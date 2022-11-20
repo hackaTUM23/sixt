@@ -46,7 +46,7 @@ class AdvancedViewController: UIViewController, NavigationMapViewDelegate, Navig
                     let emergencyTask = currentTask as? EmergencyChargingTask
                     let car2Location: CLLocationCoordinate2D?
                     if let emergencyTask {
-                        car2Location = CLLocationCoordinate2D(latitude: emergencyTask.departure.lat, longitude: emergencyTask.departure.lng)
+                        car2Location = CLLocationCoordinate2D(latitude: emergencyTask.donatorLocation.lat, longitude: emergencyTask.donatorLocation.lng)
                     } else {
                         car2Location = nil
                     }
