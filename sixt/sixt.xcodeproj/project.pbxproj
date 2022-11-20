@@ -38,6 +38,7 @@
 		5B376DE529290ED30007CB9E /* ChargingTaskObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B376DE429290ED30007CB9E /* ChargingTaskObject.swift */; };
 		5B376DE7292912030007CB9E /* TaskControllerObserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B376DE6292912030007CB9E /* TaskControllerObserve.swift */; };
 		5BC50D2C29296314002CC89A /* CarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC50D2B29296314002CC89A /* CarDetailView.swift */; };
+		5BCF710D2929AA0B0010F4CB /* GeoCodingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF710C2929AA0B0010F4CB /* GeoCodingResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		5B376DE6292912030007CB9E /* TaskControllerObserve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskControllerObserve.swift; sourceTree = "<group>"; };
 		5BA2436A2928DFCD00916CC6 /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
 		5BC50D2B29296314002CC89A /* CarDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailView.swift; sourceTree = "<group>"; };
+		5BCF710C2929AA0B0010F4CB /* GeoCodingResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoCodingResult.swift; sourceTree = "<group>"; };
 		65F6A68729291A0500FA1648 /* CarDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,6 +202,7 @@
 			children = (
 				231C89292928F702005D3784 /* UserState.swift */,
 				231C892B2928FC96005D3784 /* Model.swift */,
+				5BCF710C2929AA0B0010F4CB /* GeoCodingResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				231C893029291AE8005D3784 /* NavigationBottomBarView.swift in Sources */,
 				231C89042928453A005D3784 /* CoatyControllerTypes.swift in Sources */,
 				5B376DE529290ED30007CB9E /* ChargingTaskObject.swift in Sources */,
+				5BCF710D2929AA0B0010F4CB /* GeoCodingResult.swift in Sources */,
 				231C8915292849DD005D3784 /* MapViewRepresentable.swift in Sources */,
 				231C88F0292843F9005D3784 /* sixtApp.swift in Sources */,
 				5B020F2E29292707003F078D /* NewTaskView.swift in Sources */,
