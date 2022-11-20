@@ -55,9 +55,13 @@ struct NewTaskView: View {
                     HStack {
                         // really hacky way to ensure alignment is correct
                         Image(systemName: "arrow.right").opacity(0)
-                        Text(donationCarAddress ?? "...").lineLimit(1)
+                        Text(donationCarAddress ?? "Boltzmannstr. 3").lineLimit(1)
+                        
+                        Spacer()
+                        
+                        Text(donorCarBatteryPercentage)
+                        Image(systemName: "battery.75")
                         Image(systemName: "car.side")
-                        Label(donorCarBatteryPercentage, systemImage: "battery.75")
                     }
                 }
                 
@@ -65,15 +69,21 @@ struct NewTaskView: View {
                     Image(systemName: "arrow.right")
                         .opacity(task is EmergencyChargingTask ? 1 : 0)
                     
-                    Text(departureAddress ?? "...").lineLimit(1)
-                    Image(systemName: "car.side.and.exclamationmark")
+                    Text(departureAddress ?? "Arcisstr. 10").lineLimit(1)
                     
-                    Label(carBatteryPercentage, systemImage: "battery.25")
+                    Spacer()
+                    
+                    Text(carBatteryPercentage)
+                    Image(systemName: "battery.25")
+                    Image(systemName: "car.side.and.exclamationmark")
                 }
                 
                 HStack {
                     Image(systemName: "arrow.right")
-                    Text(destinationAddress ?? "...").lineLimit(1)
+                    Text(destinationAddress ?? "Leipartstr. 13").lineLimit(1)
+                    
+                    Spacer()
+                    
                     ChargingStationIcon()
                 }
             }
