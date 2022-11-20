@@ -51,7 +51,7 @@ struct NewTaskView: View {
                 .padding(.bottom, 5)
             
             VStack(alignment: .leading) {
-                if let emergencyTask = task as? EmergencyChargingTask {
+                if task is EmergencyChargingTask {
                     HStack {
                         // really hacky way to ensure alignment is correct
                         Image(systemName: "arrow.right").opacity(0)
