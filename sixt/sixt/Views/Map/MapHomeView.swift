@@ -40,15 +40,21 @@ struct MapHomeView: View {
             VStack {
                 Spacer()
                 HStack(alignment: .center) {
-                    ToggleView(isOn: $openToWork) {
-                        openToWork ? Color.white : Color.gray
-                    }.frame(width: 60, height: 30).padding(30)
+                    VStack {
+                        Text("Open to work")
+                            .font(.headline)
+                            .preferredColorScheme(.dark)
+                        ToggleView(isOn: $openToWork) {
+                            openToWork ? Color.white : Color.gray
+                        }.frame(width: 60, height: 30)
+                    }.padding(30)
                 }.frame(maxWidth: .infinity)
                     .background(ZStack {
                         if openToWork {
-                            AnimatedBackground().opacity(0.8)
+                            AnimatedBackground()
+                        } else {
+                            BlurView(style: .dark)
                         }
-                        BlurView()
                     }.clipShape(RoundedRectangle(cornerRadius: 20)))
                     .padding()
             }
@@ -64,6 +70,7 @@ struct MapHomeView: View {
                 model.userState = .OpenToWork
             } else {
                 model.userState = .Idle
+                showTask = false
             }
         }
         .onChange(of: model.tasks) { tasks in
