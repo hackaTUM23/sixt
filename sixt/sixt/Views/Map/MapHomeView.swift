@@ -9,10 +9,9 @@ import SwiftUI
 
 struct MapHomeView: View {
     @EnvironmentObject var model: Model
-    
     @State var openToWork = false
+    @State var accepted = false
     @State var showTask = false
-    
     @State var newChargingTask: ChargingTask? = nil
     
     var body: some View {
@@ -24,9 +23,12 @@ struct MapHomeView: View {
                 VStack {
                     ZStack {
                         HStack(alignment: .center) {
-                            NewTaskView(callBack: { self.showTask = false }, task: newChargingTask)
+                            NewTaskView(callBack: {
+                                self.showTask = false;
+                                self.accepted = true
+                            }, task: newChargingTask)
                         }.frame(maxWidth: .infinity)
-                            .background(BlurView(style: .dark))
+                            .background(BlurView(style: .light))
                             .clipShape(RoundedRectangle(cornerRadius: 20))
                             .padding()
                             .offset(y: self.showTask ? 0 : -400)
@@ -34,29 +36,29 @@ struct MapHomeView: View {
                     }
                     Spacer()
                 }
-                .preferredColorScheme(.dark)
             }
             
             VStack {
                 Spacer()
-                HStack(alignment: .center) {
-                    VStack {
-                        Text("Open to work")
-                            .font(.headline)
-                            .preferredColorScheme(.dark)
-                        ToggleView(isOn: $openToWork) {
-                            openToWork ? Color.white : Color.gray
-                        }.frame(width: 60, height: 30)
-                    }.padding(30)
-                }.frame(maxWidth: .infinity)
-                    .background(ZStack {
-                        if openToWork {
-                            AnimatedBackground()
-                        } else {
-                            BlurView(style: .dark)
-                        }
-                    }.clipShape(RoundedRectangle(cornerRadius: 20)))
-                    .padding()
+//                HStack(alignment: .center) {
+//                    VStack {
+//                        Text("Open to work")
+//                            .font(.headline)
+//                            .preferredColorScheme(.dark)
+//                        ToggleView(isOn: $openToWork) {
+//                            openToWork ? Color.white : Color.gray
+//                        }.frame(width: 60, height: 30)
+//                    }.padding(30)
+//                }.frame(maxWidth: .infinity)
+//                    .background(ZStack {
+//                        if openToWork {
+//                            AnimatedBackground()
+//                        } else {
+//                            BlurView(style: .dark)
+//                        }
+//                    }.clipShape(RoundedRectangle(cornerRadius: 20)))
+//                    .padding()
+                HomeButtonview(isStarted: $openToWork, accepted: $accepted)
             }
             
 //            if case .Working = model.userState {
@@ -78,6 +80,7 @@ struct MapHomeView: View {
                 self.newChargingTask = tasks.last
                 DispatchQueue.main.async {
                     showTask = true
+                    accepted = false
                 }
             }
         }
@@ -87,5 +90,6 @@ struct MapHomeView: View {
 struct MapHomeView_Previews: PreviewProvider {
     static var previews: some View {
         MapHomeView()
+            .environmentObject(Model.shared)
     }
 }
